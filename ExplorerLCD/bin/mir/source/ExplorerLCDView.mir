@@ -1,0 +1,1817 @@
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 3; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 4; ]
+using Toybox.System;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 5; ]
+using Toybox.Lang;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 6; ]
+using Toybox.Application as :App;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 7; ]
+using Toybox.Time.Gregorian;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 8; ]
+using Toybox.Sensor;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 9; ]
+using Toybox.ActivityMonitor;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 10; ]
+using Toybox.Math;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 11; ]
+using Toybox.Activity;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 12; ]
+using Toybox.Application.Storage;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 13; ]
+using Toybox.SensorHistory;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 14; ]
+using SunRiseSet as :Sun;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 15; ]
+using Toybox.UserProfile;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 16; ]
+using Toybox.Communications;
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 19; ]
+class ExplorerLCDView extends WatchUi.WatchFace{
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 19; ]
+    <init> {
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 22 15 ]
+        %tmp.1 = newa 1 Toybox.Lang.Array<Toybox.Lang.Symbol>;
+        %tmp.2 = getm $;
+        %tmp.3 = getv %tmp.2 :Rez;
+        %tmp.4 = getv %tmp.3 :Drawables;
+        %tmp.5 = getv %tmp.4 :LauncherIcon;
+        %tmp.6 = dup %tmp.1;
+        %tmp.7 = aputv %tmp.6 0 %tmp.5;
+        putv self :IMAGES %tmp.7;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 31 5 ]
+        %tmp.8 = getm $.Toybox.Application;
+        %tmp.9 = getv function %tmp.8 :getApp;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        %tmp.11 = getv function %tmp.10 :getProperty;
+        %tmp.12 = "BackgroundColor";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        putv self :colorBackgroung %tmp.13;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 32 5 ]
+        %tmp.14 = getm $.Toybox.Application;
+        %tmp.15 = getv function %tmp.14 :getApp;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = getv function %tmp.16 :getProperty;
+        %tmp.18 = "ForegroundColor";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        putv self :colorForeground %tmp.19;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 33 5 ]
+        %tmp.20 = getm $.Toybox.Application;
+        %tmp.21 = getv function %tmp.20 :getApp;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        %tmp.23 = getv function %tmp.22 :getProperty;
+        %tmp.24 = "IconColor";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        putv self :colorIcon %tmp.25;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 34 5 ]
+        %tmp.26 = getm $.Toybox.Application;
+        %tmp.27 = getv function %tmp.26 :getApp;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = getv function %tmp.28 :getProperty;
+        %tmp.30 = "LinesTicknes";
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        putv self :framesThicknes %tmp.31;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 35 5 ]
+        %tmp.32 = getm $.Toybox.Application;
+        %tmp.33 = getv function %tmp.32 :getApp;
+        %tmp.34 = invoke %tmp.32 %tmp.33();
+        %tmp.35 = getv function %tmp.34 :getProperty;
+        %tmp.36 = "FrameColor";
+        %tmp.37 = invoke %tmp.34 %tmp.35(%tmp.36);
+        putv self :framesColor %tmp.37;
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 19; ]
+    static
+    <init> {
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 22; @position = 15; ]
+    private
+    const IMAGES;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 23; @position = 5; ]
+    var drawable as Toybox.WatchUi.Bitmap;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 25; @position = 5; ]
+    var latitude;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 26; @position = 5; ]
+    var longitude;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 28; @position = 5; ]
+    var iconXS = null;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 29; @position = 5; ]
+    var mySettings = null;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 31; @position = 5; ]
+    var colorBackgroung;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 32; @position = 5; ]
+    var colorForeground;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 33; @position = 5; ]
+    var colorIcon;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 34; @position = 5; ]
+    var framesThicknes;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 35; @position = 5; ]
+    var framesColor;
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 38; ]
+    function initialize() as Void {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_38_26_41_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 39 8 ]
+        %tmp.2 = getv ? :WatchFace;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_38_26_41_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 44; ]
+    function onLayout(dc as Dc) as Void {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_44_40_47_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 45 8 ]
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :setLayout;
+        %tmp.4 = getv ? :Rez;
+        %tmp.5 = getv %tmp.4 :Layouts;
+        %tmp.6 = getv function %tmp.5 :WatchFace;
+        %tmp.8 = lgetv %dc;
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.9);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 46 8 ]
+        %tmp.10 = getm $.Toybox.WatchUi;
+        %tmp.11 = getv function %tmp.10 :loadResource;
+        %tmp.13 = getv ? :Rez;
+        %tmp.14 = getv %tmp.13 :Fonts;
+        %tmp.15 = getv %tmp.14 :IconXS;
+        %tmp.16 = invoke %tmp.10 %tmp.11(%tmp.15);
+        putv self :iconXS %tmp.16;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_44_40_47_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 52; ]
+    function onShow() as Void {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_52_30_76_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 53 2 ]
+        %tmp.1 = getm $.Toybox.Application;
+        %tmp.2 = getv function %tmp.1 :getApp;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv function %tmp.3 :getProperty;
+        %tmp.5 = "IconColor";
+        %tmp.6 = invoke %tmp.3 %tmp.4(%tmp.5);
+        putv self :colorIcon %tmp.6;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 54 2 ]
+        %tmp.7 = getm $.Toybox.Application;
+        %tmp.8 = getv function %tmp.7 :getApp;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        %tmp.10 = getv function %tmp.9 :getProperty;
+        %tmp.11 = "LinesTicknes";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        putv self :framesThicknes %tmp.12;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 55 2 ]
+        %tmp.13 = getm $.Toybox.Application;
+        %tmp.14 = getv function %tmp.13 :getApp;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = getv function %tmp.15 :getProperty;
+        %tmp.17 = "FrameColor";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        putv self :framesColor %tmp.18;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 56 5 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_52_30_76_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_52_30_76_4_stop" ]
+        %positionInfo.1 = local;
+        %tmp.19 = getm $.Toybox.Activity;
+        %tmp.20 = getv function %tmp.19 :getActivityInfo;
+        %tmp.21 = invoke %tmp.19 %tmp.20();
+        %tmp.22 = getv %tmp.21 :currentLocation;
+        lputv %positionInfo.1 %tmp.22;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 65 4 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_stmt:
+        %tmp.24 = lgetv %positionInfo.1;
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_false;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_26_70_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 66 5 ]
+        %tmp.27 = lgetv %positionInfo.1;
+        %tmp.28 = as %tmp.27 { (!Null) };
+        %tmp.29 = getv function %tmp.28 :toDegrees;
+        %tmp.30 = invoke %tmp.28 %tmp.29();
+        %tmp.31 = 0;
+        %tmp.32 = agetv %tmp.30 %tmp.31;
+        putv self :latitude %tmp.32;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 67 5 ]
+        %tmp.33 = lgetv %positionInfo.1;
+        %tmp.34 = as %tmp.33 { (!Null) };
+        %tmp.35 = getv function %tmp.34 :toDegrees;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        %tmp.37 = 1;
+        %tmp.38 = agetv %tmp.36 %tmp.37;
+        putv self :longitude %tmp.38;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 68 5 ]
+        %tmp.39 = getm $.Toybox.Application.Storage;
+        %tmp.40 = getv function %tmp.39 :setValue;
+        %tmp.41 = "latitudeStored";
+        %tmp.43 = getv ? :latitude;
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.43);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 69 5 ]
+        %tmp.44 = getm $.Toybox.Application.Storage;
+        %tmp.45 = getv function %tmp.44 :setValue;
+        %tmp.46 = "longitudeStored";
+        %tmp.48 = getv ? :longitude;
+        invoke %tmp.44 %tmp.45(%tmp.46, %tmp.48);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_26_70_4_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_false:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_71_8_74_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 72 5 ]
+        %tmp.49 = getm $.Toybox.Application.Storage;
+        %tmp.50 = getv function %tmp.49 :getValue;
+        %tmp.51 = "latitudeStored";
+        %tmp.52 = invoke %tmp.49 %tmp.50(%tmp.51);
+        putv self :latitude %tmp.52;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 73 5 ]
+        %tmp.53 = getm $.Toybox.Application.Storage;
+        %tmp.54 = getv function %tmp.53 :getValue;
+        %tmp.55 = "longitudeStored";
+        %tmp.56 = invoke %tmp.53 %tmp.54(%tmp.55);
+        putv self :longitude %tmp.56;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_71_8_74_4_stop:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_65_4_74_4_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_52_30_76_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 79; ]
+    function onUpdate(dc as Dc) as Void {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 80 8 ]
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :mySettings %tmp.3;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 82 8 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_stop" ]
+        %timeFormat.1 = local;
+        %tmp.4 = "$1$:$2$";
+        lputv %timeFormat.1 %tmp.4;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 83 8 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_stop" ]
+        %clockTime.2 = local;
+        %tmp.5 = getm $.Toybox.System;
+        %tmp.6 = getv function %tmp.5 :getClockTime;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %clockTime.2 %tmp.7;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 84 8 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_stop" ]
+        %hours.3 = local;
+        %tmp.8 = lgetv %clockTime.2;
+        %tmp.9 = getv %tmp.8 :hour;
+        lputv %hours.3 %tmp.9;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 85 8 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_stmt:
+        %tmp.10 = getm $.Toybox.System;
+        %tmp.11 = getv function %tmp.10 :getDeviceSettings;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = getv %tmp.12 :is24Hour;
+        %tmp.14 = not %tmp.13;
+        bf %tmp.14 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_false;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_50_89_8_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 86 12 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_12_88_12_if_stmt:
+        %tmp.16 = lgetv %hours.3;
+        %tmp.17 = 12;
+        %tmp.18 = gt %tmp.16 %tmp.17;
+        bf %tmp.18 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_12_88_12_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_12_88_12_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_28_88_12_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 87 16 ]
+        %tmp.20 = lgetv %hours.3;
+        %tmp.21 = 12;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        lputv %hours.3 %tmp.22;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_28_88_12_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_12_88_12_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_86_12_88_12_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_50_89_8_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_false:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_89_15_94_8_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 90 12 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_12_93_12_if_stmt:
+        %tmp.23 = self;
+        %tmp.24 = getv function %tmp.23 :getApp;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        %tmp.26 = getv function %tmp.25 :getProperty;
+        %tmp.27 = "UseMilitaryFormat";
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        bf %tmp.28 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_12_93_12_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_12_93_12_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_59_93_12_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 91 16 ]
+        %tmp.29 = "$1$$2$";
+        lputv %timeFormat.1 %tmp.29;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 92 16 ]
+        %tmp.30 = lgetv %hours.3;
+        %tmp.31 = getv function %tmp.30 :format;
+        %tmp.32 = "%02d";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        lputv %hours.3 %tmp.33;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_59_93_12_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_12_93_12_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_90_12_93_12_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_89_15_94_8_stop:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_85_8_94_8_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 95 8 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_stop" ]
+        %timeString.4 = local;
+        %tmp.34 = getm $.Toybox.Lang;
+        %tmp.35 = getv function %tmp.34 :format;
+        %tmp.37 = lgetv %timeFormat.1;
+        %tmp.38 = newa 2;
+        %tmp.40 = lgetv %hours.3;
+        %tmp.41 = dup %tmp.38;
+        %tmp.42 = aputv %tmp.41 0 %tmp.40;
+        %tmp.43 = lgetv %clockTime.2;
+        %tmp.44 = getv %tmp.43 :min;
+        %tmp.45 = getv function %tmp.44 :format;
+        %tmp.46 = "%02d";
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = dup %tmp.42;
+        %tmp.49 = aputv %tmp.48 1 %tmp.47;
+        %tmp.50 = invoke %tmp.34 %tmp.35(%tmp.37, %tmp.49);
+        lputv %timeString.4 %tmp.50;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 96 8 ]
+        %tmp.51 = self;
+        %tmp.52 = getv function %tmp.51 :setClock;
+        %tmp.54 = lgetv %timeString.4;
+        invoke %tmp.51 %tmp.52(%tmp.54);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 97 8 ]
+        %tmp.55 = self;
+        %tmp.56 = getv function %tmp.55 :setDate;
+        invoke %tmp.55 %tmp.56();
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 98 8 ]
+        %tmp.57 = self;
+        %tmp.58 = getv function %tmp.57 :getActivitySensor;
+        invoke %tmp.57 %tmp.58();
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 99 8 ]
+        %tmp.59 = self;
+        %tmp.60 = getv function %tmp.59 :userProfile;
+        invoke %tmp.59 %tmp.60();
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 100 2 ]
+        %tmp.61 = self;
+        %tmp.62 = getv function %tmp.61 :setNotifi;
+        invoke %tmp.61 %tmp.62();
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 104 2 ]
+        %tmp.63 = self;
+        %tmp.64 = getv function %tmp.63 :setStepsProgressBarr;
+        %tmp.66 = lgetv %dc;
+        invoke %tmp.63 %tmp.64(%tmp.66);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 105 8 ]
+        %tmp.68 = getv ? :View;
+        %tmp.69 = getv function %tmp.68 :onUpdate;
+        %tmp.71 = lgetv %dc;
+        invoke %tmp.68 %tmp.69(%tmp.71);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 106 2 ]
+        %tmp.72 = self;
+        %tmp.73 = getv function %tmp.72 :setBattery;
+        %tmp.75 = lgetv %dc;
+        invoke %tmp.72 %tmp.73(%tmp.75);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 107 8 ]
+        %tmp.76 = self;
+        %tmp.77 = getv function %tmp.76 :setSunPosition;
+        %tmp.79 = lgetv %clockTime.2;
+        %tmp.81 = lgetv %dc;
+        invoke %tmp.76 %tmp.77(%tmp.79, %tmp.81);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 108 8 ]
+        %tmp.82 = self;
+        %tmp.83 = getv function %tmp.82 :setIcons;
+        %tmp.85 = lgetv %dc;
+        invoke %tmp.82 %tmp.83(%tmp.85);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 109 8 ]
+        %tmp.86 = self;
+        %tmp.87 = getv function %tmp.86 :setFrames;
+        %tmp.89 = lgetv %dc;
+        invoke %tmp.86 %tmp.87(%tmp.89);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_79_40_111_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 118; ]
+    function onHide() as Void {
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 122; ]
+    function onExitSleep() as Void {
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 126; ]
+    function onEnterSleep() as Void {
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 130; ]
+    function setFrames(dc as Dc) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_130_29_143_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 131 2 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setPenWidth;
+        %tmp.4 = getv ? :framesThicknes;
+        invoke %tmp.1 %tmp.2(%tmp.4);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 132 8 ]
+        %tmp.5 = lgetv %dc;
+        %tmp.6 = getv function %tmp.5 :setColor;
+        %tmp.8 = getv ? :framesColor;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_TRANSPARENT;
+        invoke %tmp.5 %tmp.6(%tmp.8, %tmp.10);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 134 8 ]
+        %tmp.11 = lgetv %dc;
+        %tmp.12 = getv function %tmp.11 :drawRoundedRectangle;
+        %tmp.13 = 72;
+        %tmp.14 = 95;
+        %tmp.15 = 250;
+        %tmp.16 = 67;
+        %tmp.17 = 6;
+        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.14, %tmp.15, %tmp.16, %tmp.17);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 136 8 ]
+        %tmp.18 = lgetv %dc;
+        %tmp.19 = getv function %tmp.18 :drawRoundedRectangle;
+        %tmp.20 = 72;
+        %tmp.21 = 55;
+        %tmp.22 = 250;
+        %tmp.23 = 107;
+        %tmp.24 = 6;
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.22, %tmp.23, %tmp.24);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 138 8 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :drawRoundedRectangle;
+        %tmp.27 = 17;
+        %tmp.28 = 167;
+        %tmp.29 = 250;
+        %tmp.30 = 107;
+        %tmp.31 = 6;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28, %tmp.29, %tmp.30, %tmp.31);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 140 8 ]
+        %tmp.32 = lgetv %dc;
+        %tmp.33 = getv function %tmp.32 :drawRoundedRectangle;
+        %tmp.34 = -10;
+        %tmp.35 = 55;
+        %tmp.36 = 77;
+        %tmp.37 = 107;
+        %tmp.38 = 6;
+        invoke %tmp.32 %tmp.33(%tmp.34, %tmp.35, %tmp.36, %tmp.37, %tmp.38);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 142 8 ]
+        %tmp.39 = lgetv %dc;
+        %tmp.40 = getv function %tmp.39 :drawRoundedRectangle;
+        %tmp.41 = -10;
+        %tmp.42 = -10;
+        %tmp.43 = 222;
+        %tmp.44 = 60;
+        %tmp.45 = 6;
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.42, %tmp.43, %tmp.44, %tmp.45);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_130_29_143_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 145; ]
+    function setClock(time as Toybox.WatchUi.Text) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_145_52_150_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 147 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_145_52_150_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_145_52_150_4_stop" ]
+        %view.1 = local;
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :findDrawableById;
+        %tmp.4 = "Time";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 Toybox.WatchUi.Text;
+        lputv %view.1 %tmp.6;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 148 5 ]
+        %tmp.7 = lgetv %view.1;
+        %tmp.8 = getv function %tmp.7 :setColor;
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :getApp;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        %tmp.12 = getv function %tmp.11 :getProperty;
+        %tmp.13 = "ForegroundColor";
+        %tmp.14 = invoke %tmp.11 %tmp.12(%tmp.13);
+        %tmp.15 = as %tmp.14 Toybox.Lang.Number;
+        invoke %tmp.7 %tmp.8(%tmp.15);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 149 5 ]
+        %tmp.16 = lgetv %view.1;
+        %tmp.17 = getv function %tmp.16 :setText;
+        %tmp.19 = lgetv %time;
+        invoke %tmp.16 %tmp.17(%tmp.19);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_145_52_150_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 152; ]
+    function setDate() {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 154 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %today.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.4 = getv ? :Time;
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.8 = getv ? :Time;
+        %tmp.9 = getv %tmp.8 :FORMAT_SHORT;
+        %tmp.10 = invoke %tmp.1 %tmp.2(%tmp.6, %tmp.9);
+        lputv %today.1 %tmp.10;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 156 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %DayM.2 = local;
+        %tmp.11 = lgetv %today.1;
+        %tmp.12 = getv %tmp.11 :day;
+        lputv %DayM.2 %tmp.12;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 157 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %Month.3 = local;
+        %tmp.13 = lgetv %today.1;
+        %tmp.14 = getv %tmp.13 :month;
+        lputv %Month.3 %tmp.14;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 158 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %Year.4 = local;
+        %tmp.15 = lgetv %today.1;
+        %tmp.16 = getv %tmp.15 :year;
+        lputv %Year.4 %tmp.16;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 159 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %dateFormat.5 = local;
+        %tmp.17 = "$1$ $2$ $3$";
+        lputv %dateFormat.5 %tmp.17;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 160 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %dateString.6 = local;
+        %tmp.18 = getm $.Toybox.Lang;
+        %tmp.19 = getv function %tmp.18 :format;
+        %tmp.21 = lgetv %dateFormat.5;
+        %tmp.22 = newa 3;
+        %tmp.24 = lgetv %DayM.2;
+        %tmp.25 = dup %tmp.22;
+        %tmp.26 = aputv %tmp.25 0 %tmp.24;
+        %tmp.28 = lgetv %Month.3;
+        %tmp.29 = dup %tmp.26;
+        %tmp.30 = aputv %tmp.29 1 %tmp.28;
+        %tmp.32 = lgetv %Year.4;
+        %tmp.33 = dup %tmp.30;
+        %tmp.34 = aputv %tmp.33 2 %tmp.32;
+        %tmp.35 = invoke %tmp.18 %tmp.19(%tmp.21, %tmp.34);
+        lputv %dateString.6 %tmp.35;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 162 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %_date.7 = local;
+        %tmp.37 = getv ? :View;
+        %tmp.38 = getv function %tmp.37 :findDrawableById;
+        %tmp.39 = "Date";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = as %tmp.40 Toybox.WatchUi.Text;
+        lputv %_date.7 %tmp.41;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 163 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %_day.8 = local;
+        %tmp.43 = getv ? :View;
+        %tmp.44 = getv function %tmp.43 :findDrawableById;
+        %tmp.45 = "DayNumber";
+        %tmp.46 = invoke %tmp.43 %tmp.44(%tmp.45);
+        %tmp.47 = as %tmp.46 Toybox.WatchUi.Text;
+        lputv %_day.8 %tmp.47;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 164 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop" ]
+        %_week.9 = local;
+        %tmp.49 = getv ? :View;
+        %tmp.50 = getv function %tmp.49 :findDrawableById;
+        %tmp.51 = "WeekNumber";
+        %tmp.52 = invoke %tmp.49 %tmp.50(%tmp.51);
+        %tmp.53 = as %tmp.52 Toybox.WatchUi.Text;
+        lputv %_week.9 %tmp.53;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 165 5 ]
+        %tmp.54 = lgetv %_date.7;
+        %tmp.55 = getv function %tmp.54 :setColor;
+        %tmp.56 = self;
+        %tmp.57 = getv function %tmp.56 :getApp;
+        %tmp.58 = invoke %tmp.56 %tmp.57();
+        %tmp.59 = getv function %tmp.58 :getProperty;
+        %tmp.60 = "ForegroundColor";
+        %tmp.61 = invoke %tmp.58 %tmp.59(%tmp.60);
+        %tmp.62 = as %tmp.61 Toybox.Lang.Number;
+        invoke %tmp.54 %tmp.55(%tmp.62);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 166 5 ]
+        %tmp.63 = lgetv %_date.7;
+        %tmp.64 = getv function %tmp.63 :setText;
+        %tmp.66 = lgetv %dateString.6;
+        invoke %tmp.63 %tmp.64(%tmp.66);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 167 5 ]
+        %tmp.67 = lgetv %_day.8;
+        %tmp.68 = getv function %tmp.67 :setColor;
+        %tmp.69 = self;
+        %tmp.70 = getv function %tmp.69 :getApp;
+        %tmp.71 = invoke %tmp.69 %tmp.70();
+        %tmp.72 = getv function %tmp.71 :getProperty;
+        %tmp.73 = "ForegroundColor2";
+        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
+        %tmp.75 = as %tmp.74 Toybox.Lang.Number;
+        invoke %tmp.67 %tmp.68(%tmp.75);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 168 5 ]
+        %tmp.76 = lgetv %_day.8;
+        %tmp.77 = getv function %tmp.76 :setText;
+        %tmp.78 = "Day:";
+        %tmp.80 = getv ? :SunRiseSet;
+        %tmp.81 = getv function %tmp.80 :DayOfYear;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        %tmp.83 = getv function %tmp.82 :toString;
+        %tmp.84 = invoke %tmp.82 %tmp.83();
+        %tmp.85 = add %tmp.78 %tmp.84;
+        invoke %tmp.76 %tmp.77(%tmp.85);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 169 5 ]
+        %tmp.86 = lgetv %_week.9;
+        %tmp.87 = getv function %tmp.86 :setColor;
+        %tmp.88 = self;
+        %tmp.89 = getv function %tmp.88 :getApp;
+        %tmp.90 = invoke %tmp.88 %tmp.89();
+        %tmp.91 = getv function %tmp.90 :getProperty;
+        %tmp.92 = "ForegroundColor2";
+        %tmp.93 = invoke %tmp.90 %tmp.91(%tmp.92);
+        %tmp.94 = as %tmp.93 Toybox.Lang.Number;
+        invoke %tmp.86 %tmp.87(%tmp.94);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 170 5 ]
+        %tmp.95 = lgetv %_week.9;
+        %tmp.96 = getv function %tmp.95 :setText;
+        %tmp.97 = "Week:";
+        %tmp.98 = getm $.SunRiseSet;
+        %tmp.99 = getv function %tmp.98 :WeekOfTheYear;
+        %tmp.100 = invoke %tmp.98 %tmp.99();
+        %tmp.101 = getv function %tmp.100 :toString;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = add %tmp.97 %tmp.102;
+        invoke %tmp.95 %tmp.96(%tmp.103);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_152_22_171_5_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 173; ]
+    function setSunPosition(clockTime, dc as Dc) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 178 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop" ]
+        %timeZone.1 = local;
+        %tmp.1 = lgetv %clockTime;
+        %tmp.2 = getv %tmp.1 :timeZoneOffset;
+        %tmp.3 = 3600;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        lputv %timeZone.1 %tmp.4;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 179 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop" ]
+        %_sunRise.2 = local;
+        %tmp.6 = getv ? :View;
+        %tmp.7 = getv function %tmp.6 :findDrawableById;
+        %tmp.8 = "SunRise";
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        %tmp.10 = as %tmp.9 Toybox.WatchUi.Text;
+        lputv %_sunRise.2 %tmp.10;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 180 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop" ]
+        %_sunSet.3 = local;
+        %tmp.12 = getv ? :View;
+        %tmp.13 = getv function %tmp.12 :findDrawableById;
+        %tmp.14 = "SunSet";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        %tmp.16 = as %tmp.15 Toybox.WatchUi.Text;
+        lputv %_sunSet.3 %tmp.16;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 181 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop" ]
+        %_dayLeft.4 = local;
+        %tmp.18 = getv ? :View;
+        %tmp.19 = getv function %tmp.18 :findDrawableById;
+        %tmp.20 = "DayLeft";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        %tmp.22 = as %tmp.21 Toybox.WatchUi.Text;
+        lputv %_dayLeft.4 %tmp.22;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 182 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop" ]
+        %TimeToSunrise.5 = local;
+        %tmp.23 = null;
+        lputv %TimeToSunrise.5 %tmp.23;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 183 3 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_3_200_4_if_stmt:
+        %tmp.25 = getv ? :latitude;
+        %tmp.26 = null;
+        %tmp.27 = ne %tmp.25 %tmp.26;
+        bf %tmp.27 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_3_200_4_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_3_200_4_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 186 4 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_stop" ]
+        %sunrise.6 = local;
+        %tmp.28 = getm $.SunRiseSet;
+        %tmp.29 = getv function %tmp.28 :sunRiseSet;
+        %tmp.31 = getv ? :latitude;
+        %tmp.32 = as %tmp.31 { (!Null) };
+        %tmp.34 = getv ? :longitude;
+        %tmp.35 = 90.5;
+        %tmp.36 = true;
+        %tmp.38 = lgetv %timeZone.1;
+        %tmp.39 = invoke %tmp.28 %tmp.29(%tmp.32, %tmp.34, %tmp.35, %tmp.36, %tmp.38);
+        lputv %sunrise.6 %tmp.39;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 187 4 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_stop" ]
+        %sunset.7 = local;
+        %tmp.40 = getm $.SunRiseSet;
+        %tmp.41 = getv function %tmp.40 :sunRiseSet;
+        %tmp.43 = getv ? :latitude;
+        %tmp.45 = getv ? :longitude;
+        %tmp.46 = 90.5;
+        %tmp.47 = false;
+        %tmp.49 = lgetv %timeZone.1;
+        %tmp.50 = invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45, %tmp.46, %tmp.47, %tmp.49);
+        lputv %sunset.7 %tmp.50;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 188 4 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_4_189_23_if_stmt:
+        %tmp.52 = lgetv %sunrise.6;
+        %tmp.53 = 24;
+        %tmp.54 = gt %tmp.52 %tmp.53;
+        bf %tmp.54 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_4_189_23_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_4_189_23_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_18_189_23_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 189 4 ]
+        %tmp.56 = lgetv %sunrise.6;
+        %tmp.57 = 24;
+        %tmp.58 = sub %tmp.56 %tmp.57;
+        lputv %sunrise.6 %tmp.58;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_18_189_23_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_4_189_23_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_188_4_189_23_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 190 4 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_4_191_21_if_stmt:
+        %tmp.60 = lgetv %sunset.7;
+        %tmp.61 = 24;
+        %tmp.62 = gt %tmp.60 %tmp.61;
+        bf %tmp.62 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_4_191_21_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_4_191_21_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_17_191_21_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 191 4 ]
+        %tmp.64 = lgetv %sunset.7;
+        %tmp.65 = 24;
+        %tmp.66 = sub %tmp.64 %tmp.65;
+        lputv %sunset.7 %tmp.66;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_17_191_21_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_4_191_21_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_190_4_191_21_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 192 4 ]
+        %tmp.67 = getm $.SunRiseSet;
+        %tmp.68 = getv function %tmp.67 :dayTimeLeft;
+        %tmp.70 = lgetv %clockTime;
+        %tmp.72 = lgetv %sunrise.6;
+        %tmp.74 = lgetv %sunset.7;
+        %tmp.75 = invoke %tmp.67 %tmp.68(%tmp.70, %tmp.72, %tmp.74);
+        lputv %TimeToSunrise.5 %tmp.75;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 193 4 ]
+        %tmp.76 = lgetv %_sunRise.2;
+        %tmp.77 = getv function %tmp.76 :setColor;
+        %tmp.78 = self;
+        %tmp.79 = getv function %tmp.78 :getApp;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = getv function %tmp.80 :getProperty;
+        %tmp.82 = "ForegroundColor2";
+        %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
+        %tmp.84 = as %tmp.83 Toybox.Lang.Number;
+        invoke %tmp.76 %tmp.77(%tmp.84);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 194 4 ]
+        %tmp.85 = lgetv %_sunRise.2;
+        %tmp.86 = getv function %tmp.85 :setText;
+        %tmp.87 = getm $.SunRiseSet;
+        %tmp.88 = getv function %tmp.87 :HourFromDecimal;
+        %tmp.90 = lgetv %sunrise.6;
+        %tmp.91 = invoke %tmp.87 %tmp.88(%tmp.90);
+        %tmp.92 = getv function %tmp.91 :toString;
+        %tmp.93 = invoke %tmp.91 %tmp.92();
+        invoke %tmp.85 %tmp.86(%tmp.93);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 195 4 ]
+        %tmp.94 = lgetv %_sunSet.3;
+        %tmp.95 = getv function %tmp.94 :setColor;
+        %tmp.96 = self;
+        %tmp.97 = getv function %tmp.96 :getApp;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        %tmp.99 = getv function %tmp.98 :getProperty;
+        %tmp.100 = "ForegroundColor2";
+        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
+        %tmp.102 = as %tmp.101 Toybox.Lang.Number;
+        invoke %tmp.94 %tmp.95(%tmp.102);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 196 4 ]
+        %tmp.103 = lgetv %_sunSet.3;
+        %tmp.104 = getv function %tmp.103 :setText;
+        %tmp.105 = getm $.SunRiseSet;
+        %tmp.106 = getv function %tmp.105 :HourFromDecimal;
+        %tmp.108 = lgetv %sunset.7;
+        %tmp.109 = invoke %tmp.105 %tmp.106(%tmp.108);
+        %tmp.110 = getv function %tmp.109 :toString;
+        %tmp.111 = invoke %tmp.109 %tmp.110();
+        invoke %tmp.103 %tmp.104(%tmp.111);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 197 4 ]
+        %tmp.112 = lgetv %_dayLeft.4;
+        %tmp.113 = getv function %tmp.112 :setColor;
+        %tmp.114 = self;
+        %tmp.115 = getv function %tmp.114 :getApp;
+        %tmp.116 = invoke %tmp.114 %tmp.115();
+        %tmp.117 = getv function %tmp.116 :getProperty;
+        %tmp.118 = "ForegroundColor2";
+        %tmp.119 = invoke %tmp.116 %tmp.117(%tmp.118);
+        %tmp.120 = as %tmp.119 Toybox.Lang.Number;
+        invoke %tmp.112 %tmp.113(%tmp.120);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 198 4 ]
+        %tmp.121 = lgetv %_dayLeft.4;
+        %tmp.122 = getv function %tmp.121 :setText;
+        %tmp.123 = lgetv %TimeToSunrise.5;
+        %tmp.124 = getv function %tmp.123 :toString;
+        %tmp.125 = invoke %tmp.123 %tmp.124();
+        invoke %tmp.121 %tmp.122(%tmp.125);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 199 4 ]
+        %tmp.126 = self;
+        %tmp.127 = getv function %tmp.126 :printSunIndicator;
+        %tmp.129 = lgetv %clockTime;
+        %tmp.131 = lgetv %dc;
+        %tmp.133 = lgetv %sunrise.6;
+        %tmp.135 = lgetv %sunset.7;
+        %tmp.136 = 160;
+        %tmp.137 = 8;
+        %tmp.138 = 80;
+        %tmp.139 = 66;
+        invoke %tmp.126 %tmp.127(%tmp.129, %tmp.131, %tmp.133, %tmp.135, %tmp.136, %tmp.137, %tmp.138, %tmp.139);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_21_200_4_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_3_200_4_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_183_3_200_4_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_173_45_201_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 203; ]
+    function printSunIndicator(clockTime, dc as Dc, sunrise, sunset, lenght, height, x_start, y_start) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 205 2 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_DK_BLUE;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_LT_GRAY;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 206 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :setPenWidth;
+        %tmp.9 = 1;
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 207 8 ]
+        %tmp.10 = lgetv %dc;
+        %tmp.11 = getv function %tmp.10 :fillRoundedRectangle;
+        %tmp.13 = lgetv %x_start;
+        %tmp.15 = lgetv %y_start;
+        %tmp.17 = lgetv %lenght;
+        %tmp.19 = lgetv %height;
+        %tmp.20 = 2;
+        invoke %tmp.10 %tmp.11(%tmp.13, %tmp.15, %tmp.17, %tmp.19, %tmp.20);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 208 8 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :setColor;
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :COLOR_DK_GRAY;
+        %tmp.25 = getm $.Toybox.Graphics;
+        %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+        invoke %tmp.21 %tmp.22(%tmp.24, %tmp.26);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 209 8 ]
+        %tmp.27 = lgetv %dc;
+        %tmp.28 = getv function %tmp.27 :drawRoundedRectangle;
+        %tmp.30 = lgetv %x_start;
+        %tmp.32 = lgetv %y_start;
+        %tmp.34 = lgetv %lenght;
+        %tmp.36 = lgetv %height;
+        %tmp.37 = 2;
+        invoke %tmp.27 %tmp.28(%tmp.30, %tmp.32, %tmp.34, %tmp.36, %tmp.37);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 211 8 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_stop" ]
+        %rectangleDayX.1 = local;
+        %tmp.39 = lgetv %sunrise;
+        %tmp.41 = lgetv %lenght;
+        %tmp.42 = mul %tmp.39 %tmp.41;
+        %tmp.43 = 24;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        %tmp.46 = lgetv %x_start;
+        %tmp.47 = add %tmp.44 %tmp.46;
+        lputv %rectangleDayX.1 %tmp.47;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 212 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_stop" ]
+        %rectangleDayWidtch.2 = local;
+        %tmp.49 = lgetv %sunset;
+        %tmp.51 = lgetv %sunrise;
+        %tmp.52 = sub %tmp.49 %tmp.51;
+        %tmp.54 = lgetv %lenght;
+        %tmp.55 = mul %tmp.52 %tmp.54;
+        %tmp.56 = 24;
+        %tmp.57 = div %tmp.55 %tmp.56;
+        lputv %rectangleDayWidtch.2 %tmp.57;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 213 2 ]
+        %tmp.58 = lgetv %dc;
+        %tmp.59 = getv function %tmp.58 :setColor;
+        %tmp.60 = getm $.Toybox.Graphics;
+        %tmp.61 = getv %tmp.60 :COLOR_YELLOW;
+        %tmp.62 = getm $.Toybox.Graphics;
+        %tmp.63 = getv %tmp.62 :COLOR_YELLOW;
+        invoke %tmp.58 %tmp.59(%tmp.61, %tmp.63);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 214 2 ]
+        %tmp.64 = lgetv %dc;
+        %tmp.65 = getv function %tmp.64 :fillRectangle;
+        %tmp.67 = lgetv %rectangleDayX.1;
+        %tmp.69 = lgetv %y_start;
+        %tmp.71 = lgetv %rectangleDayWidtch.2;
+        %tmp.73 = lgetv %height;
+        invoke %tmp.64 %tmp.65(%tmp.67, %tmp.69, %tmp.71, %tmp.73);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 216 2 ]
+        %tmp.74 = lgetv %dc;
+        %tmp.75 = getv function %tmp.74 :setColor;
+        %tmp.76 = getm $.Toybox.Graphics;
+        %tmp.77 = getv %tmp.76 :COLOR_LT_GRAY;
+        %tmp.78 = getm $.Toybox.Graphics;
+        %tmp.79 = getv %tmp.78 :COLOR_LT_GRAY;
+        invoke %tmp.74 %tmp.75(%tmp.77, %tmp.79);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 217 2 ]
+        %tmp.80 = lgetv %dc;
+        %tmp.81 = getv function %tmp.80 :fillRectangle;
+        %tmp.82 = lgetv %clockTime;
+        %tmp.83 = getv %tmp.82 :hour;
+        %tmp.85 = lgetv %lenght;
+        %tmp.86 = mul %tmp.83 %tmp.85;
+        %tmp.87 = 24;
+        %tmp.88 = div %tmp.86 %tmp.87;
+        %tmp.90 = lgetv %x_start;
+        %tmp.91 = add %tmp.88 %tmp.90;
+        %tmp.92 = 63;
+        %tmp.93 = 6;
+        %tmp.94 = 14;
+        invoke %tmp.80 %tmp.81(%tmp.91, %tmp.92, %tmp.93, %tmp.94);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 218 2 ]
+        %tmp.95 = lgetv %dc;
+        %tmp.96 = getv function %tmp.95 :setPenWidth;
+        %tmp.97 = 2;
+        invoke %tmp.95 %tmp.96(%tmp.97);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 219 2 ]
+        %tmp.98 = lgetv %dc;
+        %tmp.99 = getv function %tmp.98 :setColor;
+        %tmp.100 = self;
+        %tmp.101 = getv function %tmp.100 :getApp;
+        %tmp.102 = invoke %tmp.100 %tmp.101();
+        %tmp.103 = getv function %tmp.102 :getProperty;
+        %tmp.104 = "BackgroundColor";
+        %tmp.105 = invoke %tmp.102 %tmp.103(%tmp.104);
+        %tmp.106 = as %tmp.105 Toybox.Lang.Number;
+        %tmp.107 = getm $.Toybox.Graphics;
+        %tmp.108 = getv %tmp.107 :COLOR_BLUE;
+        invoke %tmp.98 %tmp.99(%tmp.106, %tmp.108);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 220 2 ]
+        %tmp.109 = lgetv %dc;
+        %tmp.110 = getv function %tmp.109 :drawRectangle;
+        %tmp.111 = lgetv %clockTime;
+        %tmp.112 = getv %tmp.111 :hour;
+        %tmp.114 = lgetv %lenght;
+        %tmp.115 = mul %tmp.112 %tmp.114;
+        %tmp.116 = 24;
+        %tmp.117 = div %tmp.115 %tmp.116;
+        %tmp.119 = lgetv %x_start;
+        %tmp.120 = add %tmp.117 %tmp.119;
+        %tmp.121 = 63;
+        %tmp.122 = 6;
+        %tmp.123 = 14;
+        invoke %tmp.109 %tmp.110(%tmp.120, %tmp.121, %tmp.122, %tmp.123);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_203_95_221_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 223; ]
+    function getActivitySensor() {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 225 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 226 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %steps.2 = local;
+        %tmp.4 = lgetv %info.1;
+        %tmp.5 = getv %tmp.4 :steps;
+        lputv %steps.2 %tmp.5;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 228 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %calories.3 = local;
+        %tmp.6 = lgetv %info.1;
+        %tmp.7 = getv %tmp.6 :calories;
+        lputv %calories.3 %tmp.7;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 230 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %activMinWeak.4 = local;
+        %tmp.8 = lgetv %info.1;
+        %tmp.9 = getv %tmp.8 :activeMinutesWeek;
+        %tmp.10 = getv %tmp.9 :total;
+        lputv %activMinWeak.4 %tmp.10;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 231 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %_steps.5 = local;
+        %tmp.12 = getv ? :View;
+        %tmp.13 = getv function %tmp.12 :findDrawableById;
+        %tmp.14 = "Steps";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        %tmp.16 = as %tmp.15 Toybox.WatchUi.Text;
+        lputv %_steps.5 %tmp.16;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 232 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %_calories.6 = local;
+        %tmp.18 = getv ? :View;
+        %tmp.19 = getv function %tmp.18 :findDrawableById;
+        %tmp.20 = "Calories";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        %tmp.22 = as %tmp.21 Toybox.WatchUi.Text;
+        lputv %_calories.6 %tmp.22;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 233 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %_distance.7 = local;
+        %tmp.24 = getv ? :View;
+        %tmp.25 = getv function %tmp.24 :findDrawableById;
+        %tmp.26 = "Field1";
+        %tmp.27 = invoke %tmp.24 %tmp.25(%tmp.26);
+        %tmp.28 = as %tmp.27 Toybox.WatchUi.Text;
+        lputv %_distance.7 %tmp.28;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 234 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop" ]
+        %_activMinWeek.8 = local;
+        %tmp.30 = getv ? :View;
+        %tmp.31 = getv function %tmp.30 :findDrawableById;
+        %tmp.32 = "Field2";
+        %tmp.33 = invoke %tmp.30 %tmp.31(%tmp.32);
+        %tmp.34 = as %tmp.33 Toybox.WatchUi.Text;
+        lputv %_activMinWeek.8 %tmp.34;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 235 2 ]
+        %tmp.35 = lgetv %_steps.5;
+        %tmp.36 = getv function %tmp.35 :setColor;
+        %tmp.37 = self;
+        %tmp.38 = getv function %tmp.37 :getApp;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = getv function %tmp.39 :getProperty;
+        %tmp.41 = "ForegroundColor2";
+        %tmp.42 = invoke %tmp.39 %tmp.40(%tmp.41);
+        %tmp.43 = as %tmp.42 Toybox.Lang.Number;
+        invoke %tmp.35 %tmp.36(%tmp.43);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 236 2 ]
+        %tmp.44 = lgetv %_steps.5;
+        %tmp.45 = getv function %tmp.44 :setText;
+        %tmp.46 = lgetv %steps.2;
+        %tmp.47 = getv function %tmp.46 :toString;
+        %tmp.48 = invoke %tmp.46 %tmp.47();
+        invoke %tmp.44 %tmp.45(%tmp.48);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 237 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_2_240_2_if_stmt:
+        %tmp.50 = lgetv %calories.3;
+        %tmp.51 = null;
+        %tmp.52 = ne %tmp.50 %tmp.51;
+        bf %tmp.52 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_2_240_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_2_240_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_20_240_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 238 3 ]
+        %tmp.53 = lgetv %_calories.6;
+        %tmp.54 = getv function %tmp.53 :setColor;
+        %tmp.55 = self;
+        %tmp.56 = getv function %tmp.55 :getApp;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = getv function %tmp.57 :getProperty;
+        %tmp.59 = "ForegroundColor2";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        %tmp.61 = as %tmp.60 Toybox.Lang.Number;
+        invoke %tmp.53 %tmp.54(%tmp.61);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 239 3 ]
+        %tmp.62 = lgetv %_calories.6;
+        %tmp.63 = getv function %tmp.62 :setText;
+        %tmp.64 = lgetv %calories.3;
+        %tmp.65 = as %tmp.64 { (!Null) };
+        %tmp.66 = getv function %tmp.65 :toString;
+        %tmp.67 = invoke %tmp.65 %tmp.66();
+        invoke %tmp.62 %tmp.63(%tmp.67);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_20_240_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_2_240_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_237_2_240_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 241 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_2_245_2_if_stmt:
+        %tmp.68 = lgetv %info.1;
+        %tmp.69 = getv %tmp.68 :distance;
+        %tmp.70 = null;
+        %tmp.71 = ne %tmp.69 %tmp.70;
+        bf %tmp.71 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_2_245_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_2_245_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_25_245_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 242 3 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_25_245_2_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_25_245_2_stop" ]
+        %dist.9 = local;
+        %tmp.72 = lgetv %info.1;
+        %tmp.73 = getv %tmp.72 :distance;
+        %tmp.74 = 100000.0;
+        %tmp.75 = div %tmp.73 %tmp.74;
+        lputv %dist.9 %tmp.75;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 243 3 ]
+        %tmp.76 = lgetv %_distance.7;
+        %tmp.77 = getv function %tmp.76 :setColor;
+        %tmp.78 = self;
+        %tmp.79 = getv function %tmp.78 :getApp;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = getv function %tmp.80 :getProperty;
+        %tmp.82 = "ForegroundColor2";
+        %tmp.83 = invoke %tmp.80 %tmp.81(%tmp.82);
+        %tmp.84 = as %tmp.83 Toybox.Lang.Number;
+        invoke %tmp.76 %tmp.77(%tmp.84);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 244 3 ]
+        %tmp.85 = lgetv %_distance.7;
+        %tmp.86 = getv function %tmp.85 :setText;
+        %tmp.87 = lgetv %dist.9;
+        %tmp.88 = getv function %tmp.87 :format;
+        %tmp.89 = "%0.01f";
+        %tmp.90 = invoke %tmp.87 %tmp.88(%tmp.89);
+        %tmp.91 = getv function %tmp.90 :toString;
+        %tmp.92 = invoke %tmp.90 %tmp.91();
+        %tmp.93 = "km";
+        %tmp.94 = add %tmp.92 %tmp.93;
+        invoke %tmp.85 %tmp.86(%tmp.94);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_25_245_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_2_245_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_241_2_245_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 246 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_2_249_2_if_stmt:
+        %tmp.96 = lgetv %activMinWeak.4;
+        %tmp.97 = null;
+        %tmp.98 = ne %tmp.96 %tmp.97;
+        bf %tmp.98 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_2_249_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_2_249_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_24_249_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 247 3 ]
+        %tmp.99 = lgetv %_activMinWeek.8;
+        %tmp.100 = getv function %tmp.99 :setColor;
+        %tmp.101 = self;
+        %tmp.102 = getv function %tmp.101 :getApp;
+        %tmp.103 = invoke %tmp.101 %tmp.102();
+        %tmp.104 = getv function %tmp.103 :getProperty;
+        %tmp.105 = "ForegroundColor2";
+        %tmp.106 = invoke %tmp.103 %tmp.104(%tmp.105);
+        %tmp.107 = as %tmp.106 Toybox.Lang.Number;
+        invoke %tmp.99 %tmp.100(%tmp.107);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 248 3 ]
+        %tmp.108 = lgetv %_activMinWeek.8;
+        %tmp.109 = getv function %tmp.108 :setText;
+        %tmp.110 = lgetv %activMinWeak.4;
+        %tmp.111 = as %tmp.110 { (!Null) };
+        %tmp.112 = getv function %tmp.111 :toString;
+        %tmp.113 = invoke %tmp.111 %tmp.112();
+        invoke %tmp.108 %tmp.109(%tmp.113);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_24_249_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_2_249_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_246_2_249_2_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_223_29_250_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 252; ]
+    function setStepsProgressBarr(dc as Dc) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 253 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_stop" ]
+        %info.1 = local;
+        %tmp.1 = getm $.Toybox.ActivityMonitor;
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 254 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_stop" ]
+        %steps.2 = local;
+        %tmp.4 = lgetv %info.1;
+        %tmp.5 = getv %tmp.4 :steps;
+        lputv %steps.2 %tmp.5;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 255 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_stop" ]
+        %stepGoal.3 = local;
+        %tmp.6 = lgetv %info.1;
+        %tmp.7 = getv %tmp.6 :stepGoal;
+        lputv %stepGoal.3 %tmp.7;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 256 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_stop" ]
+        %percentOfDaylyGoal.4 = local;
+        %tmp.8 = 100;
+        %tmp.10 = lgetv %steps.2;
+        %tmp.11 = mul %tmp.8 %tmp.10;
+        %tmp.13 = lgetv %stepGoal.3;
+        %tmp.14 = div %tmp.11 %tmp.13;
+        lputv %percentOfDaylyGoal.4 %tmp.14;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 257 2 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :setPenWidth;
+        %tmp.17 = 1;
+        invoke %tmp.15 %tmp.16(%tmp.17);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 258 2 ]
+        %tmp.18 = lgetv %dc;
+        %tmp.19 = getv function %tmp.18 :setColor;
+        %tmp.20 = getm $.Toybox.Graphics;
+        %tmp.21 = getv %tmp.20 :COLOR_WHITE;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv %tmp.22 :COLOR_WHITE;
+        invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 259 2 ]
+        %tmp.24 = lgetv %dc;
+        %tmp.25 = getv function %tmp.24 :drawRoundedRectangle;
+        %tmp.26 = 33;
+        %tmp.27 = 172;
+        %tmp.28 = 10;
+        %tmp.29 = 18;
+        %tmp.30 = 2;
+        invoke %tmp.24 %tmp.25(%tmp.26, %tmp.27, %tmp.28, %tmp.29, %tmp.30);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 260 2 ]
+        %tmp.31 = lgetv %dc;
+        %tmp.32 = getv function %tmp.31 :setColor;
+        %tmp.33 = getm $.Toybox.Graphics;
+        %tmp.34 = getv %tmp.33 :COLOR_DK_GREEN;
+        %tmp.35 = getm $.Toybox.Graphics;
+        %tmp.36 = getv %tmp.35 :COLOR_DK_GREEN;
+        invoke %tmp.31 %tmp.32(%tmp.34, %tmp.36);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 261 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_2_264_2_if_stmt:
+        %tmp.38 = lgetv %percentOfDaylyGoal.4;
+        %tmp.39 = 99;
+        %tmp.40 = gt %tmp.38 %tmp.39;
+        bf %tmp.40 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_2_264_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_2_264_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_27_264_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 262 3 ]
+        %tmp.41 = lgetv %dc;
+        %tmp.42 = getv function %tmp.41 :setColor;
+        %tmp.43 = getm $.Toybox.Graphics;
+        %tmp.44 = getv %tmp.43 :COLOR_PURPLE;
+        %tmp.45 = getm $.Toybox.Graphics;
+        %tmp.46 = getv %tmp.45 :COLOR_PURPLE;
+        invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 263 3 ]
+        %tmp.47 = lgetv %dc;
+        %tmp.48 = getv function %tmp.47 :fillRectangle;
+        %tmp.49 = 34;
+        %tmp.50 = 174;
+        %tmp.51 = 8;
+        %tmp.52 = 2;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.51, %tmp.52);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_27_264_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_2_264_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_261_2_264_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 265 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_2_268_2_if_stmt:
+        %tmp.54 = lgetv %percentOfDaylyGoal.4;
+        %tmp.55 = 80;
+        %tmp.56 = gt %tmp.54 %tmp.55;
+        bf %tmp.56 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_2_268_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_2_268_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_27_268_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 266 3 ]
+        %tmp.57 = lgetv %dc;
+        %tmp.58 = getv function %tmp.57 :setColor;
+        %tmp.59 = getm $.Toybox.Graphics;
+        %tmp.60 = getv %tmp.59 :COLOR_BLUE;
+        %tmp.61 = getm $.Toybox.Graphics;
+        %tmp.62 = getv %tmp.61 :COLOR_DK_GREEN;
+        invoke %tmp.57 %tmp.58(%tmp.60, %tmp.62);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 267 3 ]
+        %tmp.63 = lgetv %dc;
+        %tmp.64 = getv function %tmp.63 :fillRectangle;
+        %tmp.65 = 34;
+        %tmp.66 = 177;
+        %tmp.67 = 8;
+        %tmp.68 = 2;
+        invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66, %tmp.67, %tmp.68);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_27_268_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_2_268_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_265_2_268_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 269 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_2_272_2_if_stmt:
+        %tmp.70 = lgetv %percentOfDaylyGoal.4;
+        %tmp.71 = 75;
+        %tmp.72 = gte %tmp.70 %tmp.71;
+        bf %tmp.72 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_2_272_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_2_272_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_28_272_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 270 3 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :setColor;
+        %tmp.75 = getm $.Toybox.Graphics;
+        %tmp.76 = getv %tmp.75 :COLOR_GREEN;
+        %tmp.77 = getm $.Toybox.Graphics;
+        %tmp.78 = getv %tmp.77 :COLOR_GREEN;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.78);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 271 3 ]
+        %tmp.79 = lgetv %dc;
+        %tmp.80 = getv function %tmp.79 :fillRectangle;
+        %tmp.81 = 34;
+        %tmp.82 = 180;
+        %tmp.83 = 8;
+        %tmp.84 = 2;
+        invoke %tmp.79 %tmp.80(%tmp.81, %tmp.82, %tmp.83, %tmp.84);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_28_272_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_2_272_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_269_2_272_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 273 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_2_276_2_if_stmt:
+        %tmp.86 = lgetv %percentOfDaylyGoal.4;
+        %tmp.87 = 50;
+        %tmp.88 = gt %tmp.86 %tmp.87;
+        bf %tmp.88 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_2_276_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_2_276_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_28_276_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 274 3 ]
+        %tmp.89 = lgetv %dc;
+        %tmp.90 = getv function %tmp.89 :setColor;
+        %tmp.91 = getm $.Toybox.Graphics;
+        %tmp.92 = getv %tmp.91 :COLOR_YELLOW;
+        %tmp.93 = getm $.Toybox.Graphics;
+        %tmp.94 = getv %tmp.93 :COLOR_YELLOW;
+        invoke %tmp.89 %tmp.90(%tmp.92, %tmp.94);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 275 3 ]
+        %tmp.95 = lgetv %dc;
+        %tmp.96 = getv function %tmp.95 :fillRectangle;
+        %tmp.97 = 34;
+        %tmp.98 = 183;
+        %tmp.99 = 8;
+        %tmp.100 = 2;
+        invoke %tmp.95 %tmp.96(%tmp.97, %tmp.98, %tmp.99, %tmp.100);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_28_276_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_2_276_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_273_2_276_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 277 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_2_280_2_if_stmt:
+        %tmp.102 = lgetv %percentOfDaylyGoal.4;
+        %tmp.103 = 25;
+        %tmp.104 = gt %tmp.102 %tmp.103;
+        bf %tmp.104 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_2_280_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_2_280_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_28_280_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 278 3 ]
+        %tmp.105 = lgetv %dc;
+        %tmp.106 = getv function %tmp.105 :setColor;
+        %tmp.107 = getm $.Toybox.Graphics;
+        %tmp.108 = getv %tmp.107 :COLOR_RED;
+        %tmp.109 = getm $.Toybox.Graphics;
+        %tmp.110 = getv %tmp.109 :COLOR_RED;
+        invoke %tmp.105 %tmp.106(%tmp.108, %tmp.110);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 279 3 ]
+        %tmp.111 = lgetv %dc;
+        %tmp.112 = getv function %tmp.111 :fillRectangle;
+        %tmp.113 = 34;
+        %tmp.114 = 186;
+        %tmp.115 = 8;
+        %tmp.116 = 2;
+        invoke %tmp.111 %tmp.112(%tmp.113, %tmp.114, %tmp.115, %tmp.116);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_28_280_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_2_280_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_277_2_280_2_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_252_40_282_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 285; ]
+    function userProfile() {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 286 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_stop" ]
+        %infoRHR.1 = local;
+        %tmp.1 = getm $.Toybox.UserProfile;
+        %tmp.2 = getv function %tmp.1 :getProfile;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :averageRestingHeartRate;
+        lputv %infoRHR.1 %tmp.4;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 287 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_stop" ]
+        %_hr.2 = local;
+        %tmp.6 = getv ? :View;
+        %tmp.7 = getv function %tmp.6 :findDrawableById;
+        %tmp.8 = "RestingHR";
+        %tmp.9 = invoke %tmp.6 %tmp.7(%tmp.8);
+        %tmp.10 = as %tmp.9 Toybox.WatchUi.Text;
+        lputv %_hr.2 %tmp.10;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 289 2 ]
+        %tmp.11 = lgetv %_hr.2;
+        %tmp.12 = getv function %tmp.11 :setColor;
+        %tmp.13 = self;
+        %tmp.14 = getv function %tmp.13 :getApp;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        %tmp.16 = getv function %tmp.15 :getProperty;
+        %tmp.17 = "ForegroundColor2";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = as %tmp.18 Toybox.Lang.Number;
+        invoke %tmp.11 %tmp.12(%tmp.19);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 290 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_2_292_2_if_stmt:
+        %tmp.21 = lgetv %infoRHR.1;
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        bf %tmp.23 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_2_292_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_2_292_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_19_292_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 291 2 ]
+        %tmp.24 = lgetv %_hr.2;
+        %tmp.25 = getv function %tmp.24 :setText;
+        %tmp.26 = lgetv %infoRHR.1;
+        %tmp.27 = as %tmp.26 { (!Null) };
+        %tmp.28 = getv function %tmp.27 :toString;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        invoke %tmp.24 %tmp.25(%tmp.29);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_19_292_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_2_292_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_290_2_292_2_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_285_23_293_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 295; ]
+    function setNotifi() {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 296 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_stop" ]
+        %messagesCount.1 = local;
+        %tmp.2 = getv ? :mySettings;
+        %tmp.3 = getv %tmp.2 :notificationCount;
+        lputv %messagesCount.1 %tmp.3;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 297 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_stop" ]
+        %alarmCount.2 = local;
+        %tmp.5 = getv ? :mySettings;
+        %tmp.6 = getv %tmp.5 :alarmCount;
+        lputv %alarmCount.2 %tmp.6;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 298 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_stop" ]
+        %_messagesCount.3 = local;
+        %tmp.8 = getv ? :View;
+        %tmp.9 = getv function %tmp.8 :findDrawableById;
+        %tmp.10 = "NotyficationNumber";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        %tmp.12 = as %tmp.11 Toybox.WatchUi.Text;
+        lputv %_messagesCount.3 %tmp.12;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 299 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_stop" ]
+        %_alarmCount.4 = local;
+        %tmp.14 = getv ? :View;
+        %tmp.15 = getv function %tmp.14 :findDrawableById;
+        %tmp.16 = "AlarmNumber";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        %tmp.18 = as %tmp.17 Toybox.WatchUi.Text;
+        lputv %_alarmCount.4 %tmp.18;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 300 2 ]
+        %tmp.19 = lgetv %_messagesCount.3;
+        %tmp.20 = getv function %tmp.19 :setColor;
+        %tmp.21 = self;
+        %tmp.22 = getv function %tmp.21 :getApp;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        %tmp.24 = getv function %tmp.23 :getProperty;
+        %tmp.25 = "ForegroundColor2";
+        %tmp.26 = invoke %tmp.23 %tmp.24(%tmp.25);
+        %tmp.27 = as %tmp.26 Toybox.Lang.Number;
+        invoke %tmp.19 %tmp.20(%tmp.27);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 301 2 ]
+        %tmp.28 = lgetv %_messagesCount.3;
+        %tmp.29 = getv function %tmp.28 :setText;
+        %tmp.30 = lgetv %messagesCount.1;
+        %tmp.31 = getv function %tmp.30 :toString;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        invoke %tmp.28 %tmp.29(%tmp.32);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 302 2 ]
+        %tmp.33 = lgetv %_alarmCount.4;
+        %tmp.34 = getv function %tmp.33 :setColor;
+        %tmp.35 = self;
+        %tmp.36 = getv function %tmp.35 :getApp;
+        %tmp.37 = invoke %tmp.35 %tmp.36();
+        %tmp.38 = getv function %tmp.37 :getProperty;
+        %tmp.39 = "ForegroundColor2";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = as %tmp.40 Toybox.Lang.Number;
+        invoke %tmp.33 %tmp.34(%tmp.41);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 303 2 ]
+        %tmp.42 = lgetv %_alarmCount.4;
+        %tmp.43 = getv function %tmp.42 :setText;
+        %tmp.44 = lgetv %alarmCount.2;
+        %tmp.45 = getv function %tmp.44 :toString;
+        %tmp.46 = invoke %tmp.44 %tmp.45();
+        invoke %tmp.42 %tmp.43(%tmp.46);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_295_21_304_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 306; ]
+    function setBattery(dc as Dc) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 307 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_stop" ]
+        %systemStatus.1 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %systemStatus.1 %tmp.3;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 308 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_stop" ]
+        %bateryStatus.2 = local;
+        %tmp.4 = lgetv %systemStatus.1;
+        %tmp.5 = getv %tmp.4 :battery;
+        %tmp.6 = getv function %tmp.5 :format;
+        %tmp.7 = "%2d";
+        %tmp.8 = invoke %tmp.5 %tmp.6(%tmp.7);
+        lputv %bateryStatus.2 %tmp.8;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 309 2 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_stop" ]
+        %_bateryStatus.3 = local;
+        %tmp.10 = getv ? :View;
+        %tmp.11 = getv function %tmp.10 :findDrawableById;
+        %tmp.12 = "Battery";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        %tmp.14 = as %tmp.13 Toybox.WatchUi.Text;
+        lputv %_bateryStatus.3 %tmp.14;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 310 2 ]
+        %tmp.15 = lgetv %_bateryStatus.3;
+        %tmp.16 = getv function %tmp.15 :setColor;
+        %tmp.17 = self;
+        %tmp.18 = getv function %tmp.17 :getApp;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = getv function %tmp.19 :getProperty;
+        %tmp.21 = "ForegroundColor2";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        %tmp.23 = as %tmp.22 Toybox.Lang.Number;
+        invoke %tmp.15 %tmp.16(%tmp.23);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 311 2 ]
+        %tmp.24 = lgetv %_bateryStatus.3;
+        %tmp.25 = getv function %tmp.24 :setText;
+        %tmp.26 = lgetv %bateryStatus.2;
+        %tmp.27 = getv function %tmp.26 :toString;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = "%";
+        %tmp.30 = add %tmp.28 %tmp.29;
+        invoke %tmp.24 %tmp.25(%tmp.30);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 312 2 ]
+        %tmp.31 = lgetv %dc;
+        %tmp.32 = getv function %tmp.31 :setPenWidth;
+        %tmp.33 = 1;
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 313 2 ]
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getv function %tmp.34 :setColor;
+        %tmp.36 = getm $.Toybox.Graphics;
+        %tmp.37 = getv %tmp.36 :COLOR_WHITE;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :COLOR_WHITE;
+        invoke %tmp.34 %tmp.35(%tmp.37, %tmp.39);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 314 2 ]
+        %tmp.40 = lgetv %dc;
+        %tmp.41 = getv function %tmp.40 :drawRoundedRectangle;
+        %tmp.42 = 49;
+        %tmp.43 = 138;
+        %tmp.44 = 12;
+        %tmp.45 = 21;
+        %tmp.46 = 1;
+        invoke %tmp.40 %tmp.41(%tmp.42, %tmp.43, %tmp.44, %tmp.45, %tmp.46);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 315 2 ]
+        %tmp.47 = lgetv %dc;
+        %tmp.48 = getv function %tmp.47 :fillRectangle;
+        %tmp.49 = 52;
+        %tmp.50 = 135;
+        %tmp.51 = 6;
+        %tmp.52 = 3;
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.50, %tmp.51, %tmp.52);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 316 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_2_319_2_if_stmt:
+        %tmp.53 = lgetv %systemStatus.1;
+        %tmp.54 = getv %tmp.53 :battery;
+        %tmp.55 = 60;
+        %tmp.56 = gte %tmp.54 %tmp.55;
+        bf %tmp.56 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_2_319_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_2_319_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_30_319_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 317 3 ]
+        %tmp.57 = lgetv %dc;
+        %tmp.58 = getv function %tmp.57 :setColor;
+        %tmp.59 = getm $.Toybox.Graphics;
+        %tmp.60 = getv %tmp.59 :COLOR_GREEN;
+        %tmp.61 = getm $.Toybox.Graphics;
+        %tmp.62 = getv %tmp.61 :COLOR_GREEN;
+        invoke %tmp.57 %tmp.58(%tmp.60, %tmp.62);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 318 3 ]
+        %tmp.63 = lgetv %dc;
+        %tmp.64 = getv function %tmp.63 :fillRectangle;
+        %tmp.65 = 51;
+        %tmp.66 = 140;
+        %tmp.67 = 8;
+        %tmp.68 = 5;
+        invoke %tmp.63 %tmp.64(%tmp.65, %tmp.66, %tmp.67, %tmp.68);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_30_319_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_2_319_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_316_2_319_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 320 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_2_323_2_if_stmt:
+        %tmp.69 = lgetv %systemStatus.1;
+        %tmp.70 = getv %tmp.69 :battery;
+        %tmp.71 = 40;
+        %tmp.72 = gt %tmp.70 %tmp.71;
+        bf %tmp.72 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_2_323_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_2_323_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_30_323_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 321 3 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :setColor;
+        %tmp.75 = getm $.Toybox.Graphics;
+        %tmp.76 = getv %tmp.75 :COLOR_YELLOW;
+        %tmp.77 = getm $.Toybox.Graphics;
+        %tmp.78 = getv %tmp.77 :COLOR_YELLOW;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.78);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 322 3 ]
+        %tmp.79 = lgetv %dc;
+        %tmp.80 = getv function %tmp.79 :fillRectangle;
+        %tmp.81 = 51;
+        %tmp.82 = 146;
+        %tmp.83 = 8;
+        %tmp.84 = 5;
+        invoke %tmp.79 %tmp.80(%tmp.81, %tmp.82, %tmp.83, %tmp.84);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_30_323_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_2_323_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_320_2_323_2_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 324 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_2_327_2_if_stmt:
+        %tmp.85 = lgetv %systemStatus.1;
+        %tmp.86 = getv %tmp.85 :battery;
+        %tmp.87 = 20;
+        %tmp.88 = gt %tmp.86 %tmp.87;
+        bf %tmp.88 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_2_327_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_2_327_2_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_30_327_2_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 325 3 ]
+        %tmp.89 = lgetv %dc;
+        %tmp.90 = getv function %tmp.89 :setColor;
+        %tmp.91 = getm $.Toybox.Graphics;
+        %tmp.92 = getv %tmp.91 :COLOR_RED;
+        %tmp.93 = getm $.Toybox.Graphics;
+        %tmp.94 = getv %tmp.93 :COLOR_RED;
+        invoke %tmp.89 %tmp.90(%tmp.92, %tmp.94);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 326 3 ]
+        %tmp.95 = lgetv %dc;
+        %tmp.96 = getv function %tmp.95 :fillRectangle;
+        %tmp.97 = 51;
+        %tmp.98 = 152;
+        %tmp.99 = 8;
+        %tmp.100 = 5;
+        invoke %tmp.95 %tmp.96(%tmp.97, %tmp.98, %tmp.99, %tmp.100);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_30_327_2_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_2_327_2_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_324_2_327_2_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_306_30_328_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 330; ]
+    function setAtmoSensor() {
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 347; ]
+    function setIcons(dc as Dc) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_347_28_386_1_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 348 2 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.4 = getv ? :colorIcon;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 350 2 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :drawText;
+        %tmp.9 = 185;
+        %tmp.10 = 23;
+        %tmp.12 = getv ? :iconXS;
+        %tmp.13 = "W";
+        %tmp.14 = getm $.Toybox.Graphics;
+        %tmp.15 = getv %tmp.14 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.13, %tmp.15);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 352 2 ]
+        %tmp.16 = lgetv %dc;
+        %tmp.17 = getv function %tmp.16 :drawText;
+        %tmp.18 = 116;
+        %tmp.19 = 166;
+        %tmp.21 = getv ? :iconXS;
+        %tmp.22 = "Q";
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.16 %tmp.17(%tmp.18, %tmp.19, %tmp.21, %tmp.22, %tmp.24);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 354 2 ]
+        %tmp.25 = lgetv %dc;
+        %tmp.26 = getv function %tmp.25 :drawText;
+        %tmp.27 = 116;
+        %tmp.28 = 196;
+        %tmp.30 = getv ? :iconXS;
+        %tmp.31 = "O";
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.25 %tmp.26(%tmp.27, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 356 2 ]
+        %tmp.34 = lgetv %dc;
+        %tmp.35 = getv function %tmp.34 :drawText;
+        %tmp.36 = 150;
+        %tmp.37 = 166;
+        %tmp.39 = getv ? :iconXS;
+        %tmp.40 = "X";
+        %tmp.41 = getm $.Toybox.Graphics;
+        %tmp.42 = getv %tmp.41 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.39, %tmp.40, %tmp.42);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 358 2 ]
+        %tmp.43 = lgetv %dc;
+        %tmp.44 = getv function %tmp.43 :drawText;
+        %tmp.45 = 150;
+        %tmp.46 = 196;
+        %tmp.48 = getv ? :iconXS;
+        %tmp.49 = "o";
+        %tmp.50 = getm $.Toybox.Graphics;
+        %tmp.51 = getv %tmp.50 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46, %tmp.48, %tmp.49, %tmp.51);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 360 2 ]
+        %tmp.52 = lgetv %dc;
+        %tmp.53 = getv function %tmp.52 :drawText;
+        %tmp.54 = 113;
+        %tmp.55 = 224;
+        %tmp.57 = getv ? :iconXS;
+        %tmp.58 = "l";
+        %tmp.59 = getm $.Toybox.Graphics;
+        %tmp.60 = getv %tmp.59 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.55, %tmp.57, %tmp.58, %tmp.60);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 362 2 ]
+        %tmp.61 = lgetv %dc;
+        %tmp.62 = getv function %tmp.61 :drawText;
+        %tmp.63 = 45;
+        %tmp.64 = 82;
+        %tmp.66 = getv ? :iconXS;
+        %tmp.67 = "t";
+        %tmp.68 = getm $.Toybox.Graphics;
+        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.61 %tmp.62(%tmp.63, %tmp.64, %tmp.66, %tmp.67, %tmp.69);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 364 2 ]
+        %tmp.70 = lgetv %dc;
+        %tmp.71 = getv function %tmp.70 :drawText;
+        %tmp.72 = 45;
+        %tmp.73 = 55;
+        %tmp.75 = getv ? :iconXS;
+        %tmp.76 = "R";
+        %tmp.77 = getm $.Toybox.Graphics;
+        %tmp.78 = getv %tmp.77 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.70 %tmp.71(%tmp.72, %tmp.73, %tmp.75, %tmp.76, %tmp.78);
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 378 2 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_stmt:
+        %tmp.80 = getv ? :mySettings;
+        %tmp.81 = getv %tmp.80 :phoneConnected;
+        bf %tmp.81 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_false;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_31_381_3_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 380 3 ]
+        %tmp.82 = lgetv %dc;
+        %tmp.83 = getv function %tmp.82 :setColor;
+        %tmp.84 = getm $.Toybox.Graphics;
+        %tmp.85 = getv %tmp.84 :COLOR_BLUE;
+        %tmp.86 = getm $.Toybox.Graphics;
+        %tmp.87 = getv %tmp.86 :COLOR_TRANSPARENT;
+        invoke %tmp.82 %tmp.83(%tmp.85, %tmp.87);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_31_381_3_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_false:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 382 8 ]
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_8_384_3_if_stmt:
+        %tmp.89 = getv ? :mySettings;
+        %tmp.90 = getv %tmp.89 :phoneConnected;
+        %tmp.91 = not %tmp.90;
+        bf %tmp.91 @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_8_384_3_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_8_384_3_if_true:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_38_384_3_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 383 3 ]
+        %tmp.92 = lgetv %dc;
+        %tmp.93 = getv function %tmp.92 :setColor;
+        %tmp.94 = getm $.Toybox.Graphics;
+        %tmp.95 = getv %tmp.94 :COLOR_DK_GRAY;
+        %tmp.96 = getm $.Toybox.Graphics;
+        %tmp.97 = getv %tmp.96 :COLOR_TRANSPARENT;
+        invoke %tmp.92 %tmp.93(%tmp.95, %tmp.97);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_38_384_3_stop:
+        goto @D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_8_384_3_if_end;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_382_8_384_3_if_end:
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_378_2_384_3_if_end:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 385 2 ]
+        %tmp.98 = lgetv %dc;
+        %tmp.99 = getv function %tmp.98 :drawText;
+        %tmp.100 = 45;
+        %tmp.101 = 107;
+        %tmp.103 = getv ? :iconXS;
+        %tmp.104 = "V";
+        %tmp.105 = getm $.Toybox.Graphics;
+        %tmp.106 = getv %tmp.105 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.98 %tmp.99(%tmp.100, %tmp.101, %tmp.103, %tmp.104, %tmp.106);
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_347_28_386_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 389; ]
+    function setImage() {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_389_23_392_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 390 5 ]
+        [ "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_389_23_392_4_start" "D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_389_23_392_4_stop" ]
+        %view.1 = local;
+        %tmp.2 = getv ? :View;
+        %tmp.3 = getv function %tmp.2 :findDrawableById;
+        %tmp.4 = "LauncherIcon";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        %tmp.6 = as %tmp.5 Toybox.WatchUi.Bitmap;
+        lputv %view.1 %tmp.6;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_389_23_392_4_stop:
+    }
+    [ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 394; ]
+    function getImage(index as Toybox.Lang.Number) {
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_394_50_397_4_start:
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 395 5 ]
+        %tmp.1 = getm $.Toybox.WatchUi;
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        %tmp.4 = getv ? :IMAGES;
+        %tmp.6 = lgetv %index;
+        %tmp.7 = agetv %tmp.4 %tmp.6;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.7);
+        %tmp.9 = as %tmp.8 Toybox.WatchUi.Bitmap;
+        putv self :drawable %tmp.9;
+[ "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc" 396 5 ]
+        %tmp.11 = getv ? :drawable;
+        ret %tmp.11;
+D_Repos_Garmin_ExplorerLCD_source_ExplorerLCDView_mc_394_50_397_4_stop:
+    }
+}
+[ @file = "D:\Repos\Garmin\ExplorerLCD\source\ExplorerLCDView.mc"; @line = 1; ]
+<init> {
+}

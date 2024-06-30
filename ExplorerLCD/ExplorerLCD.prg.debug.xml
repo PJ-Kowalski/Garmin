@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="D:\Repos\Garmin\ExplorerLCD\manifest.xml"/>
+<pcToLineNum>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="1" lineNum="31" parent="globals" pc="268435457" symbol="getApp"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="1" lineNum="32" parent="globals" pc="268435467" symbol="getApp"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="2" lineNum="6" parent="globals/Background" pc="268435478" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="19" parent="globals/ExplorerLCDView" pc="268435490" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="22" parent="globals/ExplorerLCDView" pc="268435501" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="31" parent="globals/ExplorerLCDView" pc="268435534" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="32" parent="globals/ExplorerLCDView" pc="268435564" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="33" parent="globals/ExplorerLCDView" pc="268435594" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="34" parent="globals/ExplorerLCDView" pc="268435624" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="3" lineNum="35" parent="globals/ExplorerLCDView" pc="268435654" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="4" lineNum="5" parent="globals/ExplorerLCDApp" pc="268435685" symbol="&lt;init&gt;"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="5" lineNum="7" parent="globals/Rez" pc="268435697" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="6" lineNum="8" parent="globals/Background" pc="268435717" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="6" lineNum="9" parent="globals/Background" pc="268435720" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="6" lineNum="13" parent="globals/Background" pc="268435738" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="7" lineNum="16" parent="globals/Background" pc="268435755" symbol="draw"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="7" lineNum="18" parent="globals/Background" pc="268435757" symbol="draw"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDBackground.mc" id="7" lineNum="19" parent="globals/Background" pc="268435788" symbol="draw"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="295" parent="globals/ExplorerLCDView" pc="268435797" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="296" parent="globals/ExplorerLCDView" pc="268435800" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="297" parent="globals/ExplorerLCDView" pc="268435812" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="298" parent="globals/ExplorerLCDView" pc="268435833" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="299" parent="globals/ExplorerLCDView" pc="268435853" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="300" parent="globals/ExplorerLCDView" pc="268435882" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="301" parent="globals/ExplorerLCDView" pc="268435905" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="302" parent="globals/ExplorerLCDView" pc="268435917" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="303" parent="globals/ExplorerLCDView" pc="268435937" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="304" parent="globals/ExplorerLCDView" pc="268435958" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="305" parent="globals/ExplorerLCDView" pc="268435977" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="306" parent="globals/ExplorerLCDView" pc="268435989" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="307" parent="globals/ExplorerLCDView" pc="268436007" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="309" parent="globals/ExplorerLCDView" pc="268436026" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="310" parent="globals/ExplorerLCDView" pc="268436038" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="311" parent="globals/ExplorerLCDView" pc="268436058" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="313" parent="globals/ExplorerLCDView" pc="268436077" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="314" parent="globals/ExplorerLCDView" pc="268436089" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="8" lineNum="315" parent="globals/ExplorerLCDView" pc="268436109" symbol="setBattery"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="164" parent="globals/ExplorerLCDView" pc="268436129" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="169" parent="globals/ExplorerLCDView" pc="268436132" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="170" parent="globals/ExplorerLCDView" pc="268436144" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="171" parent="globals/ExplorerLCDView" pc="268436164" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="172" parent="globals/ExplorerLCDView" pc="268436184" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="173" parent="globals/ExplorerLCDView" pc="268436204" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="174" parent="globals/ExplorerLCDView" pc="268436207" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="175" parent="globals/ExplorerLCDView" pc="268436216" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="176" parent="globals/ExplorerLCDView" pc="268436248" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="177" parent="globals/ExplorerLCDView" pc="268436280" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="178" parent="globals/ExplorerLCDView" pc="268436288" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="179" parent="globals/ExplorerLCDView" pc="268436295" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="180" parent="globals/ExplorerLCDView" pc="268436303" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="181" parent="globals/ExplorerLCDView" pc="268436310" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="182" parent="globals/ExplorerLCDView" pc="268436330" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="183" parent="globals/ExplorerLCDView" pc="268436359" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="184" parent="globals/ExplorerLCDView" pc="268436389" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="185" parent="globals/ExplorerLCDView" pc="268436418" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="186" parent="globals/ExplorerLCDView" pc="268436448" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="187" parent="globals/ExplorerLCDView" pc="268436477" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="9" lineNum="188" parent="globals/ExplorerLCDView" pc="268436494" symbol="setSunPosition"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="274" parent="globals/ExplorerLCDView" pc="268436521" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="275" parent="globals/ExplorerLCDView" pc="268436524" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="276" parent="globals/ExplorerLCDView" pc="268436541" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="278" parent="globals/ExplorerLCDView" pc="268436561" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="279" parent="globals/ExplorerLCDView" pc="268436590" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="10" lineNum="280" parent="globals/ExplorerLCDView" pc="268436596" symbol="userProfile"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="212" parent="globals/ExplorerLCDView" pc="268436615" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="214" parent="globals/ExplorerLCDView" pc="268436618" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="215" parent="globals/ExplorerLCDView" pc="268436630" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="216" parent="globals/ExplorerLCDView" pc="268436638" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="217" parent="globals/ExplorerLCDView" pc="268436646" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="218" parent="globals/ExplorerLCDView" pc="268436654" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="219" parent="globals/ExplorerLCDView" pc="268436662" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="220" parent="globals/ExplorerLCDView" pc="268436675" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="221" parent="globals/ExplorerLCDView" pc="268436695" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="222" parent="globals/ExplorerLCDView" pc="268436715" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="223" parent="globals/ExplorerLCDView" pc="268436735" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="224" parent="globals/ExplorerLCDView" pc="268436755" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="225" parent="globals/ExplorerLCDView" pc="268436784" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="226" parent="globals/ExplorerLCDView" pc="268436801" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="227" parent="globals/ExplorerLCDView" pc="268436807" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="228" parent="globals/ExplorerLCDView" pc="268436836" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="230" parent="globals/ExplorerLCDView" pc="268436854" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="231" parent="globals/ExplorerLCDView" pc="268436864" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="232" parent="globals/ExplorerLCDView" pc="268436878" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="233" parent="globals/ExplorerLCDView" pc="268436907" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="235" parent="globals/ExplorerLCDView" pc="268436943" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="236" parent="globals/ExplorerLCDView" pc="268436949" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="12" lineNum="237" parent="globals/ExplorerLCDView" pc="268436978" symbol="getActivitySensor"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="13" lineNum="136" parent="globals/ExplorerLCDView" pc="268436997" symbol="setClock"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="13" lineNum="137" parent="globals/ExplorerLCDView" pc="268437000" symbol="setClock"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="13" lineNum="138" parent="globals/ExplorerLCDView" pc="268437013" symbol="setClock"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="13" lineNum="139" parent="globals/ExplorerLCDView" pc="268437033" symbol="setClock"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="13" lineNum="140" parent="globals/ExplorerLCDView" pc="268437062" symbol="setClock"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="52" parent="globals/ExplorerLCDView" pc="268437075" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="53" parent="globals/ExplorerLCDView" pc="268437078" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="56" parent="globals/ExplorerLCDView" pc="268437095" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="57" parent="globals/ExplorerLCDView" pc="268437101" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="58" parent="globals/ExplorerLCDView" pc="268437118" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="59" parent="globals/ExplorerLCDView" pc="268437136" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="60" parent="globals/ExplorerLCDView" pc="268437159" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="63" parent="globals/ExplorerLCDView" pc="268437183" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="15" lineNum="64" parent="globals/ExplorerLCDView" pc="268437207" symbol="onShow"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="17" lineNum="44" parent="globals/ExplorerLCDView" pc="268437232" symbol="onLayout"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="17" lineNum="45" parent="globals/ExplorerLCDView" pc="268437234" symbol="onLayout"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="17" lineNum="46" parent="globals/ExplorerLCDView" pc="268437267" symbol="onLayout"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="121" parent="globals/ExplorerLCDView" pc="268437306" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="122" parent="globals/ExplorerLCDView" pc="268437308" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="123" parent="globals/ExplorerLCDView" pc="268437323" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="125" parent="globals/ExplorerLCDView" pc="268437340" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="127" parent="globals/ExplorerLCDView" pc="268437361" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="129" parent="globals/ExplorerLCDView" pc="268437382" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="131" parent="globals/ExplorerLCDView" pc="268437404" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="18" lineNum="133" parent="globals/ExplorerLCDView" pc="268437424" symbol="setFrames"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="284" parent="globals/ExplorerLCDView" pc="268437446" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="285" parent="globals/ExplorerLCDView" pc="268437449" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="286" parent="globals/ExplorerLCDView" pc="268437461" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="287" parent="globals/ExplorerLCDView" pc="268437473" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="288" parent="globals/ExplorerLCDView" pc="268437493" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="289" parent="globals/ExplorerLCDView" pc="268437513" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="290" parent="globals/ExplorerLCDView" pc="268437542" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="291" parent="globals/ExplorerLCDView" pc="268437559" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="19" lineNum="292" parent="globals/ExplorerLCDView" pc="268437588" symbol="setNotifi"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="192" parent="globals/ExplorerLCDView" pc="268437606" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="194" parent="globals/ExplorerLCDView" pc="268437609" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="195" parent="globals/ExplorerLCDView" pc="268437627" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="196" parent="globals/ExplorerLCDView" pc="268437639" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="197" parent="globals/ExplorerLCDView" pc="268437659" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="198" parent="globals/ExplorerLCDView" pc="268437675" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="200" parent="globals/ExplorerLCDView" pc="268437695" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="201" parent="globals/ExplorerLCDView" pc="268437708" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="202" parent="globals/ExplorerLCDView" pc="268437721" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="203" parent="globals/ExplorerLCDView" pc="268437741" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="205" parent="globals/ExplorerLCDView" pc="268437759" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="206" parent="globals/ExplorerLCDView" pc="268437779" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="207" parent="globals/ExplorerLCDView" pc="268437810" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="208" parent="globals/ExplorerLCDView" pc="268437822" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="20" lineNum="209" parent="globals/ExplorerLCDView" pc="268437855" symbol="printSunIndicator"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="143" parent="globals/ExplorerLCDView" pc="268437887" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="145" parent="globals/ExplorerLCDView" pc="268437890" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="146" parent="globals/ExplorerLCDView" pc="268437916" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="147" parent="globals/ExplorerLCDView" pc="268437924" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="148" parent="globals/ExplorerLCDView" pc="268437932" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="149" parent="globals/ExplorerLCDView" pc="268437940" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="150" parent="globals/ExplorerLCDView" pc="268437948" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="151" parent="globals/ExplorerLCDView" pc="268437955" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="153" parent="globals/ExplorerLCDView" pc="268437990" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="154" parent="globals/ExplorerLCDView" pc="268438010" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="155" parent="globals/ExplorerLCDView" pc="268438030" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="156" parent="globals/ExplorerLCDView" pc="268438050" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="157" parent="globals/ExplorerLCDView" pc="268438079" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="158" parent="globals/ExplorerLCDView" pc="268438091" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="159" parent="globals/ExplorerLCDView" pc="268438120" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="160" parent="globals/ExplorerLCDView" pc="268438152" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="22" lineNum="161" parent="globals/ExplorerLCDView" pc="268438181" symbol="setDate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="336" parent="globals/ExplorerLCDView" pc="268438214" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="337" parent="globals/ExplorerLCDView" pc="268438216" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="339" parent="globals/ExplorerLCDView" pc="268438233" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="341" parent="globals/ExplorerLCDView" pc="268438260" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="343" parent="globals/ExplorerLCDView" pc="268438287" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="345" parent="globals/ExplorerLCDView" pc="268438314" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="347" parent="globals/ExplorerLCDView" pc="268438342" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="349" parent="globals/ExplorerLCDView" pc="268438370" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="351" parent="globals/ExplorerLCDView" pc="268438397" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="353" parent="globals/ExplorerLCDView" pc="268438423" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="367" parent="globals/ExplorerLCDView" pc="268438449" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="369" parent="globals/ExplorerLCDView" pc="268438462" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="371" parent="globals/ExplorerLCDView" pc="268438481" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="372" parent="globals/ExplorerLCDView" pc="268438495" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="23" lineNum="374" parent="globals/ExplorerLCDView" pc="268438511" symbol="setIcons"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="24" lineNum="38" parent="globals/ExplorerLCDView" pc="268438538" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="24" lineNum="39" parent="globals/ExplorerLCDView" pc="268438540" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="70" parent="globals/ExplorerLCDView" pc="268438553" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="71" parent="globals/ExplorerLCDView" pc="268438556" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="73" parent="globals/ExplorerLCDView" pc="268438573" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="74" parent="globals/ExplorerLCDView" pc="268438580" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="75" parent="globals/ExplorerLCDView" pc="268438592" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="76" parent="globals/ExplorerLCDView" pc="268438600" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="77" parent="globals/ExplorerLCDView" pc="268438619" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="78" parent="globals/ExplorerLCDView" pc="268438627" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="81" parent="globals/ExplorerLCDView" pc="268438637" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="82" parent="globals/ExplorerLCDView" pc="268438659" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="83" parent="globals/ExplorerLCDView" pc="268438666" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="86" parent="globals/ExplorerLCDView" pc="268438682" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="87" parent="globals/ExplorerLCDView" pc="268438729" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="88" parent="globals/ExplorerLCDView" pc="268438740" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="89" parent="globals/ExplorerLCDView" pc="268438747" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="90" parent="globals/ExplorerLCDView" pc="268438754" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="91" parent="globals/ExplorerLCDView" pc="268438761" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="95" parent="globals/ExplorerLCDView" pc="268438768" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="96" parent="globals/ExplorerLCDView" pc="268438784" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="97" parent="globals/ExplorerLCDView" pc="268438795" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="98" parent="globals/ExplorerLCDView" pc="268438806" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="99" parent="globals/ExplorerLCDView" pc="268438819" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="25" lineNum="100" parent="globals/ExplorerLCDView" pc="268438830" symbol="onUpdate"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="26" lineNum="383" parent="globals/ExplorerLCDView" pc="268438842" symbol="getImage"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="26" lineNum="384" parent="globals/ExplorerLCDView" pc="268438844" symbol="getImage"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="26" lineNum="385" parent="globals/ExplorerLCDView" pc="268438871" symbol="getImage"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="241" parent="globals/ExplorerLCDView" pc="268438877" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="242" parent="globals/ExplorerLCDView" pc="268438880" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="243" parent="globals/ExplorerLCDView" pc="268438892" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="244" parent="globals/ExplorerLCDView" pc="268438900" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="245" parent="globals/ExplorerLCDView" pc="268438908" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="246" parent="globals/ExplorerLCDView" pc="268438918" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="247" parent="globals/ExplorerLCDView" pc="268438930" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="248" parent="globals/ExplorerLCDView" pc="268438950" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="249" parent="globals/ExplorerLCDView" pc="268438971" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="250" parent="globals/ExplorerLCDView" pc="268438989" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="251" parent="globals/ExplorerLCDView" pc="268438997" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="252" parent="globals/ExplorerLCDView" pc="268439017" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="254" parent="globals/ExplorerLCDView" pc="268439036" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="255" parent="globals/ExplorerLCDView" pc="268439044" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="256" parent="globals/ExplorerLCDView" pc="268439062" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="258" parent="globals/ExplorerLCDView" pc="268439081" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="259" parent="globals/ExplorerLCDView" pc="268439089" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="260" parent="globals/ExplorerLCDView" pc="268439107" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="262" parent="globals/ExplorerLCDView" pc="268439126" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="263" parent="globals/ExplorerLCDView" pc="268439134" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="264" parent="globals/ExplorerLCDView" pc="268439154" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="266" parent="globals/ExplorerLCDView" pc="268439173" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="267" parent="globals/ExplorerLCDView" pc="268439181" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="27" lineNum="268" parent="globals/ExplorerLCDView" pc="268439201" symbol="setStepsProgressBarr"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="28" lineNum="378" parent="globals/ExplorerLCDView" pc="268439221" symbol="setImage"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDView.mc" id="28" lineNum="379" parent="globals/ExplorerLCDView" pc="268439224" symbol="setImage"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="30" lineNum="25" parent="globals/ExplorerLCDApp" pc="268439245" symbol="onSettingsChanged"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="30" lineNum="26" parent="globals/ExplorerLCDApp" pc="268439247" symbol="onSettingsChanged"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="31" lineNum="20" parent="globals/ExplorerLCDApp" pc="268439259" symbol="getInitialView"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="31" lineNum="21" parent="globals/ExplorerLCDApp" pc="268439261" symbol="getInitialView"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="32" lineNum="7" parent="globals/ExplorerLCDApp" pc="268439291" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\ExplorerLCD\\source\\ExplorerLCDApp.mc" id="32" lineNum="8" parent="globals/ExplorerLCDApp" pc="268439293" symbol="initialize"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="146" parent="globals/SunRiseSet" pc="268439306" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="149" parent="globals/SunRiseSet" pc="268439317" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="150" parent="globals/SunRiseSet" pc="268439331" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="151" parent="globals/SunRiseSet" pc="268439345" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="152" parent="globals/SunRiseSet" pc="268439352" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="153" parent="globals/SunRiseSet" pc="268439359" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="154" parent="globals/SunRiseSet" pc="268439362" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="155" parent="globals/SunRiseSet" pc="268439370" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="157" parent="globals/SunRiseSet" pc="268439388" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="158" parent="globals/SunRiseSet" pc="268439396" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="159" parent="globals/SunRiseSet" pc="268439406" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="160" parent="globals/SunRiseSet" pc="268439414" symbol="dayTimeLeft"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="34" lineNum="162" parent="globals/SunRiseSet" pc="268439429" symbol="dayTimeLeft"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="35" lineNum="703" parent="globals/SunRiseSet/Rez" pc="268439432" symbol="&lt;init&gt;"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="117" parent="globals/SunRiseSet" pc="268439457" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="118" parent="globals/SunRiseSet" pc="268439468" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="119" parent="globals/SunRiseSet" pc="268439471" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="120" parent="globals/SunRiseSet" pc="268439478" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="121" parent="globals/SunRiseSet" pc="268439485" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="122" parent="globals/SunRiseSet" pc="268439510" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="123" parent="globals/SunRiseSet" pc="268439518" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="124" parent="globals/SunRiseSet" pc="268439526" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="126" parent="globals/SunRiseSet" pc="268439534" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="128" parent="globals/SunRiseSet" pc="268439565" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="130" parent="globals/SunRiseSet" pc="268439579" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="132" parent="globals/SunRiseSet" pc="268439599" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="136" parent="globals/SunRiseSet" pc="268439609" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="138" parent="globals/SunRiseSet" pc="268439623" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="140" parent="globals/SunRiseSet" pc="268439643" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="36" lineNum="142" parent="globals/SunRiseSet" pc="268439650" symbol="DayOfYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="8" parent="globals/SunRiseSet" pc="268439653" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="18" parent="globals/SunRiseSet" pc="268439664" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="19" parent="globals/SunRiseSet" pc="268439671" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="20" parent="globals/SunRiseSet" pc="268439678" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="22" parent="globals/SunRiseSet" pc="268439686" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="24" parent="globals/SunRiseSet" pc="268439693" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="26" parent="globals/SunRiseSet" pc="268439693" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="27" parent="globals/SunRiseSet" pc="268439698" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="29" parent="globals/SunRiseSet" pc="268439714" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="31" parent="globals/SunRiseSet" pc="268439727" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="33" parent="globals/SunRiseSet" pc="268439743" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="34" parent="globals/SunRiseSet" pc="268439804" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="35" parent="globals/SunRiseSet" pc="268439813" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="36" parent="globals/SunRiseSet" pc="268439824" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="37" parent="globals/SunRiseSet" pc="268439831" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="39" parent="globals/SunRiseSet" pc="268439839" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="40" parent="globals/SunRiseSet" pc="268439879" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="41" parent="globals/SunRiseSet" pc="268439888" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="42" parent="globals/SunRiseSet" pc="268439899" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="43" parent="globals/SunRiseSet" pc="268439906" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="45" parent="globals/SunRiseSet" pc="268439914" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="46" parent="globals/SunRiseSet" pc="268439936" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="47" parent="globals/SunRiseSet" pc="268439958" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="49" parent="globals/SunRiseSet" pc="268439968" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="51" parent="globals/SunRiseSet" pc="268439975" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="52" parent="globals/SunRiseSet" pc="268440000" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="54" parent="globals/SunRiseSet" pc="268440028" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="56" parent="globals/SunRiseSet" pc="268440089" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="57" parent="globals/SunRiseSet" pc="268440097" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="58" parent="globals/SunRiseSet" pc="268440115" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="59" parent="globals/SunRiseSet" pc="268440123" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="61" parent="globals/SunRiseSet" pc="268440141" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="62" parent="globals/SunRiseSet" pc="268440141" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="63" parent="globals/SunRiseSet" pc="268440146" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="65" parent="globals/SunRiseSet" pc="268440172" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="67" parent="globals/SunRiseSet" pc="268440191" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="69" parent="globals/SunRiseSet" pc="268440198" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="71" parent="globals/SunRiseSet" pc="268440220" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="72" parent="globals/SunRiseSet" pc="268440227" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="73" parent="globals/SunRiseSet" pc="268440235" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="74" parent="globals/SunRiseSet" pc="268440245" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="75" parent="globals/SunRiseSet" pc="268440252" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="77" parent="globals/SunRiseSet" pc="268440259" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="37" lineNum="78" parent="globals/SunRiseSet" pc="268440266" symbol="sunRiseSet"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="81" parent="globals/SunRiseSet" pc="268440269" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="83" parent="globals/SunRiseSet" pc="268440280" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="84" parent="globals/SunRiseSet" pc="268440296" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="85" parent="globals/SunRiseSet" pc="268440303" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="87" parent="globals/SunRiseSet" pc="268440310" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="87" parent="globals/SunRiseSet" pc="268440318" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="88" parent="globals/SunRiseSet" pc="268440325" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="89" parent="globals/SunRiseSet" pc="268440332" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="38" lineNum="90" parent="globals/SunRiseSet" pc="268440386" symbol="HourFromDecimal"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="93" parent="globals/SunRiseSet" pc="268440389" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="94" parent="globals/SunRiseSet" pc="268440400" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="95" parent="globals/SunRiseSet" pc="268440425" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="96" parent="globals/SunRiseSet" pc="268440433" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="98" parent="globals/SunRiseSet" pc="268440441" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="104" parent="globals/SunRiseSet" pc="268440483" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="106" parent="globals/SunRiseSet" pc="268440499" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="107" parent="globals/SunRiseSet" pc="268440516" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="109" parent="globals/SunRiseSet" pc="268440524" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="110" parent="globals/SunRiseSet" pc="268440534" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="112" parent="globals/SunRiseSet" pc="268440542" symbol="WeekOfTheYear"/>
+<entry filename="D:\\Repos\\Garmin\\SunRiseSet\\SunRiseSet.mc" id="39" lineNum="114" parent="globals/SunRiseSet" pc="268440549" symbol="WeekOfTheYear"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="17" parent="globals/Rez/Layouts" pc="268440552" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="18" parent="globals/Rez/Layouts" pc="268440563" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="20" parent="globals/Rez/Layouts" pc="268440587" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="22" parent="globals/Rez/Layouts" pc="268440688" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="24" parent="globals/Rez/Layouts" pc="268440770" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="26" parent="globals/Rez/Layouts" pc="268440863" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="28" parent="globals/Rez/Layouts" pc="268440957" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="30" parent="globals/Rez/Layouts" pc="268441051" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="32" parent="globals/Rez/Layouts" pc="268441144" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="34" parent="globals/Rez/Layouts" pc="268441239" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="36" parent="globals/Rez/Layouts" pc="268441333" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="38" parent="globals/Rez/Layouts" pc="268441427" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="40" parent="globals/Rez/Layouts" pc="268441522" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="42" parent="globals/Rez/Layouts" pc="268441604" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="44" parent="globals/Rez/Layouts" pc="268441686" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="46" parent="globals/Rez/Layouts" pc="268441778" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="48" parent="globals/Rez/Layouts" pc="268441870" symbol="WatchFace"/>
+<entry filename="d:\\Repos\\Garmin\\ExplorerLCD\\gen\\006-B4375-00\\source\\Rez.mcgen" id="40" lineNum="50" parent="globals/Rez/Layouts" pc="268441963" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry id="8389346" symbol="text"/>
+<entry id="10" object="true" symbol="ExplorerLCDView"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="17" symbol="framesThicknes"/>
+<entry field="true" id="12" symbol="&lt;globals/ExplorerLCDView/&lt;&gt;IMAGES&gt;"/>
+<entry field="true" id="51" symbol="ColorGreen"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry field="true" id="55" symbol="ColorRed"/>
+<entry id="36" method="true" symbol="WeekOfTheYear"/>
+<entry field="true" id="8388938" symbol="month"/>
+<entry field="true" id="49" symbol="ColorDarkRed"/>
+<entry id="21" method="true" symbol="printSunIndicator"/>
+<entry id="8390424" module="true" symbol="Storage"/>
+<entry id="32" method="true" symbol="userProfile"/>
+<entry id="11" module="true" symbol="SunRiseSet"/>
+<entry id="18" method="true" symbol="getActivitySensor"/>
+<entry id="8391035" method="true" symbol="getImage"/>
+<entry field="true" id="63" symbol="MilitaryFormatTitle"/>
+<entry field="true" id="16" symbol="framesColor"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="8388647" module="true" symbol="UserProfile"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="27" method="true" symbol="setIcons"/>
+<entry field="true" id="45" symbol="ColorBlue"/>
+<entry field="true" id="15" symbol="colorIcon"/>
+<entry field="true" id="41" symbol="AppName"/>
+<entry id="8388633" module="true" symbol="ActivityMonitor"/>
+<entry id="6" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry id="30" method="true" symbol="setStepsProgressBarr"/>
+<entry id="8" module="true" symbol="globals/SunRiseSet/Rez"/>
+<entry id="8388631" module="true" symbol="Activity"/>
+<entry field="true" id="8390756" symbol="drawable"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="53" symbol="ColorOrange"/>
+<entry id="2" module="true" symbol="globals/Rez"/>
+<entry field="true" id="20" symbol="mySettings"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry field="true" id="8389314" symbol="latitude"/>
+<entry id="8389348" symbol="font"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry field="true" id="47" symbol="ColorDarkGray"/>
+<entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+<entry field="true" id="62" symbol="LineTicknes"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry field="true" id="59" symbol="ForegroundColorTitle2"/>
+<entry field="true" id="61" symbol="IconColor"/>
+<entry field="true" id="56" symbol="ColorWhite"/>
+<entry field="true" id="46" symbol="ColorDarkBlue"/>
+<entry field="true" id="19" symbol="iconXS"/>
+<entry field="true" id="44" symbol="ColorBlack"/>
+<entry id="8388637" module="true" symbol="Communications"/>
+<entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+<entry id="22" method="true" symbol="setAtmoSensor"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry field="true" id="8389315" symbol="longitude"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="7" module="true" symbol="globals/SunRiseSet"/>
+<entry id="24" method="true" symbol="setClock"/>
+<entry field="true" id="8388720" symbol="hour"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="8389068" method="true" symbol="draw"/>
+<entry id="29" method="true" symbol="setNotifi"/>
+<entry field="true" id="39" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry field="true" id="48" symbol="ColorDarkGreen"/>
+<entry id="8388643" module="true" symbol="Sensor"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry field="true" id="42" symbol="BackgroundColorTitle"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8390146" module="true" object="true" symbol="Background"/>
+<entry field="true" id="64" symbol="ThinLine"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="14" symbol="colorForeground"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry field="true" id="60" symbol="FrameColor"/>
+<entry id="25" method="true" symbol="setDate"/>
+<entry id="8388641" module="true" symbol="Math"/>
+<entry id="37" method="true" symbol="dayTimeLeft"/>
+<entry id="35" method="true" symbol="HourFromDecimal"/>
+<entry id="26" method="true" symbol="setFrames"/>
+<entry field="true" id="52" symbol="ColorLightGray"/>
+<entry field="true" id="50" symbol="ColorFiolet"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="8389347" symbol="color"/>
+<entry field="true" id="8388939" symbol="day"/>
+<entry field="true" id="54" symbol="ColorPink"/>
+<entry id="8389781" module="true" symbol="SensorHistory"/>
+<entry id="9" object="true" symbol="ExplorerLCDApp"/>
+<entry id="34" method="true" symbol="DayOfYear"/>
+<entry field="true" id="58" symbol="ForegroundColorTitle"/>
+<entry field="true" id="8388940" symbol="year"/>
+<entry id="33" module="true" symbol="Layouts"/>
+<entry id="23" method="true" symbol="setBattery"/>
+<entry id="38" method="true" symbol="sunRiseSet"/>
+<entry field="true" id="13" symbol="colorBackgroung"/>
+<entry field="true" id="57" symbol="ColorYelow"/>
+<entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+<entry field="true" id="43" symbol="BoldLine"/>
+<entry id="28" method="true" symbol="setImage"/>
+<entry field="true" id="40" symbol="IconXS"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry id="31" method="true" symbol="setSunPosition"/>
+<entry id="8388635" module="true" symbol="Application"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435753" name="dictionary" stackId="1" startPc="268435720"/>
+<entry arg="true" endPc="268435796" name="dc" stackId="1" startPc="268435755"/>
+<entry arg="true" endPc="268436128" name="dc" stackId="1" startPc="268435797"/>
+<entry endPc="268436127" name="systemStatus" stackId="2" startPc="268435800"/>
+<entry endPc="268436127" name="bateryStatus" stackId="3" startPc="268435800"/>
+<entry endPc="268436127" name="_bateryStatus" stackId="4" startPc="268435800"/>
+<entry arg="true" endPc="268436520" name="clockTime" stackId="1" startPc="268436129"/>
+<entry arg="true" endPc="268436520" name="dc" stackId="2" startPc="268436129"/>
+<entry endPc="268436519" name="timeZone" stackId="3" startPc="268436132"/>
+<entry endPc="268436519" name="_sunRise" stackId="4" startPc="268436132"/>
+<entry endPc="268436519" name="_sunSet" stackId="5" startPc="268436132"/>
+<entry endPc="268436519" name="_dayLeft" stackId="6" startPc="268436132"/>
+<entry endPc="268436519" name="TimeToSunrise" stackId="7" startPc="268436132"/>
+<entry endPc="268436519" name="sunrise" stackId="8" startPc="268436216"/>
+<entry endPc="268436519" name="sunset" stackId="9" startPc="268436216"/>
+<entry endPc="268436613" name="infoRHR" stackId="1" startPc="268436524"/>
+<entry endPc="268436613" name="_hr" stackId="2" startPc="268436524"/>
+<entry endPc="268436995" name="info" stackId="1" startPc="268436618"/>
+<entry endPc="268436995" name="steps" stackId="2" startPc="268436618"/>
+<entry endPc="268436995" name="stepGoal" stackId="3" startPc="268436618"/>
+<entry endPc="268436995" name="calories" stackId="4" startPc="268436618"/>
+<entry endPc="268436995" name="floor" stackId="5" startPc="268436618"/>
+<entry endPc="268436995" name="activMinWeak" stackId="6" startPc="268436618"/>
+<entry endPc="268436995" name="_steps" stackId="7" startPc="268436618"/>
+<entry endPc="268436995" name="_calories" stackId="8" startPc="268436618"/>
+<entry endPc="268436995" name="_distance" stackId="9" startPc="268436618"/>
+<entry endPc="268436995" name="_activMinWeek" stackId="10" startPc="268436618"/>
+<entry endPc="268436942" name="dist" stackId="11" startPc="268436864"/>
+<entry arg="true" endPc="268437074" name="time" stackId="1" startPc="268436997"/>
+<entry endPc="268437073" name="now" stackId="2" startPc="268437000"/>
+<entry endPc="268437073" name="view" stackId="3" startPc="268437000"/>
+<entry endPc="268437230" name="positionInfo" stackId="1" startPc="268437078"/>
+<entry arg="true" endPc="268437305" name="dc" stackId="1" startPc="268437232"/>
+<entry arg="true" endPc="268437445" name="dc" stackId="1" startPc="268437306"/>
+<entry endPc="268437604" name="messagesCount" stackId="1" startPc="268437449"/>
+<entry endPc="268437604" name="alarmCount" stackId="2" startPc="268437449"/>
+<entry endPc="268437604" name="_messagesCount" stackId="3" startPc="268437449"/>
+<entry endPc="268437604" name="_alarmCount" stackId="4" startPc="268437449"/>
+<entry arg="true" endPc="268437886" name="clockTime" stackId="1" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="dc" stackId="2" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="sunrise" stackId="3" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="sunset" stackId="4" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="lenght" stackId="5" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="height" stackId="6" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="x_start" stackId="7" startPc="268437606"/>
+<entry arg="true" endPc="268437886" name="y_start" stackId="8" startPc="268437606"/>
+<entry endPc="268437885" name="rectangleDayX" stackId="9" startPc="268437609"/>
+<entry endPc="268437885" name="rectangleDayWidtch" stackId="10" startPc="268437609"/>
+<entry endPc="268438212" name="today" stackId="1" startPc="268437890"/>
+<entry endPc="268438212" name="Day" stackId="2" startPc="268437890"/>
+<entry endPc="268438212" name="DayM" stackId="3" startPc="268437890"/>
+<entry endPc="268438212" name="Month" stackId="4" startPc="268437890"/>
+<entry endPc="268438212" name="Year" stackId="5" startPc="268437890"/>
+<entry endPc="268438212" name="dateFormat" stackId="6" startPc="268437890"/>
+<entry endPc="268438212" name="dateString" stackId="7" startPc="268437890"/>
+<entry endPc="268438212" name="_date" stackId="8" startPc="268437890"/>
+<entry endPc="268438212" name="_day" stackId="9" startPc="268437890"/>
+<entry endPc="268438212" name="_week" stackId="10" startPc="268437890"/>
+<entry arg="true" endPc="268438537" name="dc" stackId="1" startPc="268438214"/>
+<entry arg="true" endPc="268438841" name="dc" stackId="1" startPc="268438553"/>
+<entry endPc="268438840" name="timeFormat" stackId="2" startPc="268438556"/>
+<entry endPc="268438840" name="clockTime" stackId="3" startPc="268438556"/>
+<entry endPc="268438840" name="hours" stackId="4" startPc="268438556"/>
+<entry endPc="268438840" name="timeString" stackId="5" startPc="268438556"/>
+<entry arg="true" endPc="268438876" name="index" stackId="1" startPc="268438842"/>
+<entry arg="true" endPc="268439220" name="dc" stackId="1" startPc="268438877"/>
+<entry endPc="268439219" name="info" stackId="2" startPc="268438880"/>
+<entry endPc="268439219" name="steps" stackId="3" startPc="268438880"/>
+<entry endPc="268439219" name="stepGoal" stackId="4" startPc="268438880"/>
+<entry endPc="268439219" name="percentOfDaylyGoal" stackId="5" startPc="268438880"/>
+<entry endPc="268439243" name="view" stackId="1" startPc="268439224"/>
+<entry arg="true" endPc="268439431" name="currentTime" stackId="1" startPc="268439306"/>
+<entry arg="true" endPc="268439431" name="sunrise" stackId="2" startPc="268439306"/>
+<entry arg="true" endPc="268439431" name="sunset" stackId="3" startPc="268439306"/>
+<entry endPc="268439598" name="i" stackId="8" startPc="268439579"/>
+<entry endPc="268439642" name="i" stackId="9" startPc="268439623"/>
+<entry arg="true" endPc="268440268" name="latitude" stackId="1" startPc="268439653"/>
+<entry arg="true" endPc="268440268" name="longitude" stackId="2" startPc="268439653"/>
+<entry arg="true" endPc="268440268" name="zenith" stackId="3" startPc="268439653"/>
+<entry arg="true" endPc="268440268" name="riseSet" stackId="4" startPc="268439653"/>
+<entry arg="true" endPc="268440268" name="localOffset" stackId="5" startPc="268439653"/>
+<entry arg="true" endPc="268440388" name="decimalData" stackId="1" startPc="268440269"/>
+<entry arg="true" endPc="268442047" name="dc" stackId="1" startPc="268440552"/>
+</localVars>
+<deviceInfo deviceVersion="fcbb2d71ec35a1d3f34d13093a6835d1c69522b8" partNumber="006-B4375-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGreen"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LineTicknes"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MilitaryFormatTitle"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorFiolet"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BoldLine"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlue"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorPink"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorGreen"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="BackgroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="IconColor"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorBlack"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorOrange"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ThinLine"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FrameColor"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkRed"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorYelow"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorWhite"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorLightGray"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ForegroundColorTitle2"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="IconXS"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkBlue"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorRed"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ColorDarkGray"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="85" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/Background" offset="170" parentId="globals" symbolId="Background" type="class"/>
+<dataEntry label="globals/ExplorerLCDView" offset="223" parentId="globals" symbolId="ExplorerLCDView" type="class"/>
+<dataEntry label="globals/ExplorerLCDApp" offset="546" parentId="globals" symbolId="ExplorerLCDApp" type="class"/>
+<dataEntry label="globals/Rez" offset="626" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/SunRiseSet" offset="688" parentId="globals" symbolId="SunRiseSet" type="module"/>
+<dataEntry label="globals/Rez/Drawables" offset="768" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="803" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="838" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="873" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry label="globals/SunRiseSet/Rez" offset="1115" parentId="SunRiseSet" symbolId="Rez" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435477" name="getApp" startPc="268435457">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435489" name="&lt;init&gt;" parent="Background" startPc="268435478">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435684" name="&lt;init&gt;" parent="ExplorerLCDView" startPc="268435490">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435696" name="&lt;init&gt;" parent="ExplorerLCDApp" startPc="268435685">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435716" name="&lt;init&gt;" parent="Rez" startPc="268435697">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="SunRiseSet">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435754" name="initialize" parent="Background" startPc="268435717">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435796" name="draw" parent="Background" startPc="268435755">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436128" name="setBattery" parent="ExplorerLCDView" startPc="268435797">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436520" name="setSunPosition" parent="ExplorerLCDView" startPc="268436129">
+<param id="clockTime"/>
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436614" name="userProfile" parent="ExplorerLCDView" startPc="268436521">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="ExplorerLCDView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436996" name="getActivitySensor" parent="ExplorerLCDView" startPc="268436615">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437074" name="setClock" parent="ExplorerLCDView" startPc="268436997">
+<param id="time"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="ExplorerLCDView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437231" name="onShow" parent="ExplorerLCDView" startPc="268437075">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setAtmoSensor" parent="ExplorerLCDView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437305" name="onLayout" parent="ExplorerLCDView" startPc="268437232">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437445" name="setFrames" parent="ExplorerLCDView" startPc="268437306">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437605" name="setNotifi" parent="ExplorerLCDView" startPc="268437446">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437886" name="printSunIndicator" parent="ExplorerLCDView" startPc="268437606">
+<param id="clockTime"/>
+<param id="dc"/>
+<param id="sunrise"/>
+<param id="sunset"/>
+<param id="lenght"/>
+<param id="height"/>
+<param id="x_start"/>
+<param id="y_start"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="ExplorerLCDView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438213" name="setDate" parent="ExplorerLCDView" startPc="268437887">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438537" name="setIcons" parent="ExplorerLCDView" startPc="268438214">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438552" name="initialize" parent="ExplorerLCDView" startPc="268438538">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438841" name="onUpdate" parent="ExplorerLCDView" startPc="268438553">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268438876" name="getImage" parent="ExplorerLCDView" startPc="268438842">
+<param id="index"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439220" name="setStepsProgressBarr" parent="ExplorerLCDView" startPc="268438877">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439244" name="setImage" parent="ExplorerLCDView" startPc="268439221">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="ExplorerLCDApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439258" name="onSettingsChanged" parent="ExplorerLCDApp" startPc="268439245">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439290" name="getInitialView" parent="ExplorerLCDApp" startPc="268439259">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439305" name="initialize" parent="ExplorerLCDApp" startPc="268439291">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="ExplorerLCDApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439431" name="dayTimeLeft" parent="SunRiseSet" startPc="268439306">
+<param id="currentTime"/>
+<param id="sunrise"/>
+<param id="sunset"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439456" name="&lt;init&gt;" parent="Rez" startPc="268439432">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268439652" name="DayOfYear" parent="SunRiseSet" startPc="268439457">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440268" name="sunRiseSet" parent="SunRiseSet" startPc="268439653">
+<param id="latitude"/>
+<param id="longitude"/>
+<param id="zenith"/>
+<param id="riseSet"/>
+<param id="localOffset"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440388" name="HourFromDecimal" parent="SunRiseSet" startPc="268440269">
+<param id="decimalData"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268440551" name="WeekOfTheYear" parent="SunRiseSet" startPc="268440389">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268442047" name="WatchFace" parent="Layouts" startPc="268440552">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

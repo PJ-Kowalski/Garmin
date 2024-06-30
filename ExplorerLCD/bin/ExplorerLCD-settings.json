@@ -1,0 +1,353 @@
+{
+  "settings" : [ {
+    "key" : "BackgroundColor",
+    "valueType" : "number",
+    "defaultValue" : 0,
+    "configTitle" : "BackgroundColorTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorBlack",
+      "value" : 0
+    }, {
+      "display" : "ColorDarkGray",
+      "value" : 5592405
+    }, {
+      "display" : "ColorLightGray",
+      "value" : 11184810
+    }, {
+      "display" : "ColorWhite",
+      "value" : 16777215
+    }, {
+      "display" : "ColorRed",
+      "value" : 16711680
+    }, {
+      "display" : "ColorDarkRed",
+      "value" : 11141120
+    }, {
+      "display" : "ColorOrange",
+      "value" : 16733440
+    }, {
+      "display" : "ColorYelow",
+      "value" : 16755200
+    }, {
+      "display" : "ColorGreen",
+      "value" : 65280
+    }, {
+      "display" : "ColorDarkGreen",
+      "value" : 43520
+    }, {
+      "display" : "ColorBlue",
+      "value" : 43775
+    }, {
+      "display" : "ColorDarkBlue",
+      "value" : 255
+    }, {
+      "display" : "ColorFiolet",
+      "value" : 11141375
+    }, {
+      "display" : "ColorPink",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ForegroundColor",
+    "valueType" : "number",
+    "defaultValue" : 16777215,
+    "configTitle" : "ForegroundColorTitle",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorBlack",
+      "value" : 0
+    }, {
+      "display" : "ColorDarkGray",
+      "value" : 5592405
+    }, {
+      "display" : "ColorLightGray",
+      "value" : 11184810
+    }, {
+      "display" : "ColorWhite",
+      "value" : 16777215
+    }, {
+      "display" : "ColorRed",
+      "value" : 16711680
+    }, {
+      "display" : "ColorDarkRed",
+      "value" : 11141120
+    }, {
+      "display" : "ColorOrange",
+      "value" : 16733440
+    }, {
+      "display" : "ColorYelow",
+      "value" : 16755200
+    }, {
+      "display" : "ColorGreen",
+      "value" : 65280
+    }, {
+      "display" : "ColorDarkGreen",
+      "value" : 43520
+    }, {
+      "display" : "ColorBlue",
+      "value" : 43775
+    }, {
+      "display" : "ColorDarkBlue",
+      "value" : 255
+    }, {
+      "display" : "ColorFiolet",
+      "value" : 11141375
+    }, {
+      "display" : "ColorPink",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "ForegroundColor2",
+    "valueType" : "number",
+    "defaultValue" : 16777215,
+    "configTitle" : "ForegroundColorTitle2",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorBlack",
+      "value" : 0
+    }, {
+      "display" : "ColorDarkGray",
+      "value" : 5592405
+    }, {
+      "display" : "ColorLightGray",
+      "value" : 11184810
+    }, {
+      "display" : "ColorWhite",
+      "value" : 16777215
+    }, {
+      "display" : "ColorRed",
+      "value" : 16711680
+    }, {
+      "display" : "ColorDarkRed",
+      "value" : 11141120
+    }, {
+      "display" : "ColorOrange",
+      "value" : 16733440
+    }, {
+      "display" : "ColorYelow",
+      "value" : 16755200
+    }, {
+      "display" : "ColorGreen",
+      "value" : 65280
+    }, {
+      "display" : "ColorDarkGreen",
+      "value" : 43520
+    }, {
+      "display" : "ColorBlue",
+      "value" : 43775
+    }, {
+      "display" : "ColorDarkBlue",
+      "value" : 255
+    }, {
+      "display" : "ColorFiolet",
+      "value" : 11141375
+    }, {
+      "display" : "ColorPink",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "IconColor",
+    "valueType" : "number",
+    "defaultValue" : 16777215,
+    "configTitle" : "IconColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorBlack",
+      "value" : 0
+    }, {
+      "display" : "ColorDarkGray",
+      "value" : 5592405
+    }, {
+      "display" : "ColorLightGray",
+      "value" : 11184810
+    }, {
+      "display" : "ColorWhite",
+      "value" : 16777215
+    }, {
+      "display" : "ColorRed",
+      "value" : 16711680
+    }, {
+      "display" : "ColorDarkRed",
+      "value" : 11141120
+    }, {
+      "display" : "ColorOrange",
+      "value" : 16733440
+    }, {
+      "display" : "ColorYelow",
+      "value" : 16755200
+    }, {
+      "display" : "ColorGreen",
+      "value" : 65280
+    }, {
+      "display" : "ColorDarkGreen",
+      "value" : 43520
+    }, {
+      "display" : "ColorBlue",
+      "value" : 43775
+    }, {
+      "display" : "ColorDarkBlue",
+      "value" : 255
+    }, {
+      "display" : "ColorFiolet",
+      "value" : 11141375
+    }, {
+      "display" : "ColorPink",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "FrameColor",
+    "valueType" : "number",
+    "defaultValue" : 16777215,
+    "configTitle" : "FrameColor",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ColorBlack",
+      "value" : 0
+    }, {
+      "display" : "ColorDarkGray",
+      "value" : 5592405
+    }, {
+      "display" : "ColorLightGray",
+      "value" : 11184810
+    }, {
+      "display" : "ColorWhite",
+      "value" : 16777215
+    }, {
+      "display" : "ColorRed",
+      "value" : 16711680
+    }, {
+      "display" : "ColorDarkRed",
+      "value" : 11141120
+    }, {
+      "display" : "ColorOrange",
+      "value" : 16733440
+    }, {
+      "display" : "ColorYelow",
+      "value" : 16755200
+    }, {
+      "display" : "ColorGreen",
+      "value" : 65280
+    }, {
+      "display" : "ColorDarkGreen",
+      "value" : 43520
+    }, {
+      "display" : "ColorBlue",
+      "value" : 43775
+    }, {
+      "display" : "ColorDarkBlue",
+      "value" : 255
+    }, {
+      "display" : "ColorFiolet",
+      "value" : 11141375
+    }, {
+      "display" : "ColorPink",
+      "value" : 16711935
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "LinesTicknes",
+    "valueType" : "number",
+    "defaultValue" : 1,
+    "configTitle" : "LineTicknes",
+    "configPrompt" : null,
+    "configType" : "list",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : [ {
+      "display" : "ThinLine",
+      "value" : 1
+    }, {
+      "display" : "BoldLine",
+      "value" : 2
+    } ],
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  }, {
+    "key" : "UseMilitaryFormat",
+    "valueType" : "boolean",
+    "defaultValue" : false,
+    "configTitle" : "MilitaryFormatTitle",
+    "configPrompt" : null,
+    "configType" : "boolean",
+    "configError" : null,
+    "configHelpUrl" : null,
+    "configReadonly" : false,
+    "configRequired" : false,
+    "configOptions" : null,
+    "configMin" : null,
+    "configMax" : null,
+    "configMaxLength" : null
+  } ],
+  "supportsLiveValidation" : false,
+  "languages" : {
+    "valyrian" : {
+      "ForegroundColorTitle2" : "Foreground Other",
+      "ColorBlue" : "Blue",
+      "BackgroundColorTitle" : "Background Color",
+      "ColorDarkRed" : "Dark Red",
+      "ThinLine" : "Thin frames",
+      "LineTicknes" : "Frames",
+      "AppName" : "Explorer LCD",
+      "IconColor" : "Icons Foreground",
+      "ColorDarkGreen" : "Dark Green",
+      "ColorYelow" : "Yelow",
+      "ColorRed" : "Red",
+      "ColorFiolet" : "Fiolet",
+      "ColorPink" : "Pink",
+      "ColorWhite" : "White",
+      "ColorGreen" : "Green",
+      "ColorLightGray" : "Light Gray",
+      "ColorDarkGray" : "Dark Gray",
+      "ColorDarkBlue" : "Dark Blue",
+      "MilitaryFormatTitle" : "Military Format for 24 Hour Time",
+      "ColorBlack" : "Black",
+      "BoldLine" : "Bold frames",
+      "ColorOrange" : "Orange",
+      "ForegroundColorTitle" : "Foreground Color",
+      "FrameColor" : "Frame color"
+    }
+  }
+}

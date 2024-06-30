@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="C:\Users\Piotr\eclipse-workspace\SunRiseSet\manifest6984766293088708703.xml"/>
+    <pcToLineNum>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="3" pc="268435456" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="13" pc="268435468" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="14" pc="268435490" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="15" pc="268435512" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="17" pc="268435525" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="19" pc="268435535" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="21" pc="268435535" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="22" pc="268435540" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="24" pc="268435562" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="26" pc="268435581" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="28" pc="268435597" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="29" pc="268435671" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="30" pc="268435682" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="31" pc="268435695" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="32" pc="268435706" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="34" pc="268435719" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="35" pc="268435769" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="36" pc="268435780" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="37" pc="268435793" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="38" pc="268435804" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="40" pc="268435817" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="41" pc="268435850" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="42" pc="268435883" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="44" pc="268435893" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="46" pc="268435903" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="47" pc="268435933" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="49" pc="268435971" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="51" pc="268436047" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="52" pc="268436058" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="53" pc="268436084" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="54" pc="268436095" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="56" pc="268436121" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="57" pc="268436121" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="58" pc="268436126" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="60" pc="268436159" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="62" pc="268436183" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="64" pc="268436193" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="66" pc="268436215" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="67" pc="268436222" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="68" pc="268436233" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="69" pc="268436246" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="70" pc="268436257" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="72" pc="268436270" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="3" lineNum="73" pc="268436277" symbol="sunRiseSet"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="76" pc="268436281" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="78" pc="268436293" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="79" pc="268436314" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="80" pc="268436321" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="82" pc="268436331" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="82" pc="268436342" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="83" pc="268436355" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="84" pc="268436362" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="4" lineNum="85" pc="268436437" symbol="HourFromDecimal"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="88" pc="268436441" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="89" pc="268436453" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="90" pc="268436503" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="91" pc="268436516" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="93" pc="268436526" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="99" pc="268436589" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="101" pc="268436610" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="102" pc="268436645" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="104" pc="268436655" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="105" pc="268436671" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="107" pc="268436679" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="5" lineNum="109" pc="268436692" symbol="WeekOfTheYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="112" pc="268436702" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="113" pc="268436714" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="114" pc="268436721" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="115" pc="268436885" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="116" pc="268437049" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="117" pc="268437099" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="118" pc="268437109" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="119" pc="268437119" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="121" pc="268437129" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="123" pc="268437186" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="125" pc="268437207" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="127" pc="268437230" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="131" pc="268437240" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="133" pc="268437261" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="135" pc="268437284" symbol="DayOfYear"/>
+        <entry filename="C:\\Users\\Piotr\\eclipse-workspace\\SunRiseSet\\SunRiseSet.mc" id="6" lineNum="137" pc="268437291" symbol="DayOfYear"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="13" method="true" symbol="WeekOfTheYear"/>
+        <entry field="true" id="8388938" symbol="month"/>
+        <entry id="10" module="true" symbol="SunRiseSet"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="4" module="true" symbol="globals/SunRiseSet/Rez/Drawables"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry id="3" module="true" symbol="globals/SunRiseSet/Rez"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="16" module="true" symbol="Menus"/>
+        <entry id="8" module="true" symbol="globals/SunRiseSet/Rez/JsonData"/>
+        <entry id="9" module="true" symbol="globals/SunRiseSet/Rez/Strings"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="2" module="true" symbol="globals/SunRiseSet"/>
+        <entry id="6" module="true" symbol="globals/SunRiseSet/Rez/Fonts"/>
+        <entry field="true" id="8388720" symbol="hour"/>
+        <entry id="8390088" module="true" object="true" symbol="JsonData"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="7" module="true" symbol="globals/SunRiseSet/Rez/Layouts"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="5" module="true" symbol="globals/SunRiseSet/Rez/Menus"/>
+        <entry id="12" method="true" symbol="HourFromDecimal"/>
+        <entry field="true" id="8388939" symbol="day"/>
+        <entry id="14" method="true" symbol="DayOfYear"/>
+        <entry field="true" id="8388940" symbol="year"/>
+        <entry id="15" module="true" symbol="Layouts"/>
+        <entry id="11" method="true" symbol="sunRiseSet"/>
+    </symbolTable>
+    <localVars>
+        <entry endPc="268436280" name="cosDec" stackId="17" startPc="268435468"/>
+        <entry endPc="268436280" name="cosH" stackId="18" startPc="268435468"/>
+        <entry endPc="268436280" name="RAquadrant" stackId="15" startPc="268435468"/>
+        <entry endPc="268436280" name="Lquadrant" stackId="14" startPc="268435468"/>
+        <entry endPc="268436280" name="lngHour" stackId="9" startPc="268435468"/>
+        <entry endPc="268436280" name="T" stackId="20" startPc="268435468"/>
+        <entry endPc="268436280" name="R2D" stackId="7" startPc="268435468"/>
+        <entry endPc="268436280" name="localT" stackId="22" startPc="268435468"/>
+        <entry endPc="268436280" name="M" stackId="11" startPc="268435468"/>
+        <entry endPc="268436280" name="RA" stackId="13" startPc="268435468"/>
+        <entry endPc="268436280" name="L" stackId="12" startPc="268435468"/>
+        <entry endPc="268436280" name="UT" stackId="21" startPc="268435468"/>
+        <entry endPc="268436280" name="sinDec" stackId="16" startPc="268435468"/>
+        <entry endPc="268436280" name="D2R" stackId="6" startPc="268435468"/>
+        <entry endPc="268436280" name="dayOfYear" stackId="8" startPc="268435468"/>
+        <entry endPc="268436280" name="H" stackId="19" startPc="268435468"/>
+        <entry endPc="268436280" name="t" stackId="10" startPc="268435468"/>
+        <entry arg="true" endPc="268436281" name="zenith" stackId="3" startPc="268435456"/>
+        <entry arg="true" endPc="268436281" name="riseSet" stackId="4" startPc="268435456"/>
+        <entry arg="true" endPc="268436281" name="longitude" stackId="2" startPc="268435456"/>
+        <entry arg="true" endPc="268436281" name="localOffset" stackId="5" startPc="268435456"/>
+        <entry arg="true" endPc="268436281" name="latitude" stackId="1" startPc="268435456"/>
+        <entry endPc="268436440" name="hour" stackId="2" startPc="268436293"/>
+        <entry endPc="268436440" name="minutes" stackId="4" startPc="268436293"/>
+        <entry endPc="268436440" name="minutesDecimal" stackId="3" startPc="268436293"/>
+        <entry endPc="268436440" name="dateString" stackId="6" startPc="268436293"/>
+        <entry endPc="268436440" name="timeFormat" stackId="5" startPc="268436293"/>
+        <entry arg="true" endPc="268436441" name="decimalData" stackId="1" startPc="268436281"/>
+        <entry endPc="268436701" name="yearFirstDayOfWeek" stackId="7" startPc="268436453"/>
+        <entry endPc="268436701" name="firstDayInYear" stackId="6" startPc="268436453"/>
+        <entry endPc="268436701" name="dayOfWeek" stackId="3" startPc="268436453"/>
+        <entry endPc="268436701" name="momentOfCurrentYear" stackId="5" startPc="268436453"/>
+        <entry endPc="268436701" name="options" stackId="4" startPc="268436453"/>
+        <entry endPc="268436701" name="dayOfYear" stackId="2" startPc="268436453"/>
+        <entry endPc="268436701" name="week" stackId="8" startPc="268436453"/>
+        <entry endPc="268436701" name="dateS" stackId="1" startPc="268436453"/>
+        <entry endPc="268437230" name="i" stackId="8" startPc="268437207"/>
+        <entry endPc="268437284" name="i" stackId="9" startPc="268437261"/>
+        <entry endPc="268437294" name="day" stackId="5" startPc="268436714"/>
+        <entry endPc="268437294" name="dayOfYear" stackId="1" startPc="268436714"/>
+        <entry endPc="268437294" name="year" stackId="7" startPc="268436714"/>
+        <entry endPc="268437294" name="dateS" stackId="4" startPc="268436714"/>
+        <entry endPc="268437294" name="month" stackId="6" startPc="268436714"/>
+        <entry endPc="268437294" name="leapYear" stackId="3" startPc="268436714"/>
+        <entry endPc="268437294" name="normalYear" stackId="2" startPc="268436714"/>
+    </localVars>
+    <annotations/>
+    <dataEntryOffsetMappings>
+        <dataEntry offset="95" parentId="" symbolId="globals" type="module"/>
+        <dataEntry offset="142" parentId="globals" symbolId="SunRiseSet" type="module"/>
+        <dataEntry offset="213" parentId="SunRiseSet" symbolId="Rez" type="module"/>
+        <dataEntry offset="292" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="323" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="354" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="385" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="416" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="447" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" name="sunRiseSet" parent="SunRiseSet">
+            <param id="latitude"/>
+            <param id="longitude"/>
+            <param id="zenith"/>
+            <param id="riseSet"/>
+            <param id="localOffset"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="HourFromDecimal" parent="SunRiseSet">
+            <param id="decimalData"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="WeekOfTheYear" parent="SunRiseSet">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="DayOfYear" parent="SunRiseSet">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

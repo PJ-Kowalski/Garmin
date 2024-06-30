@@ -1,0 +1,934 @@
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 1; ]
+using Toybox.System;
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 2; ]
+using Toybox.Lang;
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 3; ]
+using Toybox.Time.Gregorian;
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 4; ]
+using Toybox.Time;
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 5; ]
+using Toybox.Math;
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 6; ]
+module SunRiseSet {
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 8; ]
+    function sunRiseSet(latitude, longitude, zenith, riseSet, localOffset) {
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 18 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %D2R.1 = local;
+        %tmp.1 = getm $.Toybox.Math;
+        %tmp.2 = getv %tmp.1 :PI;
+        %tmp.3 = 180;
+        %tmp.4 = div %tmp.2 %tmp.3;
+        lputv %D2R.1 %tmp.4;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 19 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %R2D.2 = local;
+        %tmp.5 = 180;
+        %tmp.6 = getm $.Toybox.Math;
+        %tmp.7 = getv %tmp.6 :PI;
+        %tmp.8 = div %tmp.5 %tmp.7;
+        lputv %R2D.2 %tmp.8;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 20 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %dayOfYear.3 = local;
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :DayOfYear;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %dayOfYear.3 %tmp.11;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 22 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %lngHour.4 = local;
+        %tmp.13 = lgetv %longitude;
+        %tmp.14 = 15;
+        %tmp.15 = div %tmp.13 %tmp.14;
+        lputv %lngHour.4 %tmp.15;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 24 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %t.5 = local;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 26 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_stmt:
+        %tmp.17 = lgetv %riseSet;
+        bf %tmp.17 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_13_27_40_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 27 3 ]
+        %tmp.19 = lgetv %dayOfYear.3;
+        %tmp.20 = 6;
+        %tmp.22 = lgetv %lngHour.4;
+        %tmp.23 = sub %tmp.20 %tmp.22;
+        %tmp.24 = 24;
+        %tmp.25 = div %tmp.23 %tmp.24;
+        %tmp.26 = add %tmp.19 %tmp.25;
+        lputv %t.5 %tmp.26;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_13_27_40_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_false:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_28_6_29_41_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 29 3 ]
+        %tmp.28 = lgetv %dayOfYear.3;
+        %tmp.29 = 18;
+        %tmp.31 = lgetv %lngHour.4;
+        %tmp.32 = sub %tmp.29 %tmp.31;
+        %tmp.33 = 24;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        %tmp.35 = add %tmp.28 %tmp.34;
+        lputv %t.5 %tmp.35;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_28_6_29_41_stop:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_26_2_29_41_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 31 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %M.6 = local;
+        %tmp.36 = 0.9856;
+        %tmp.38 = lgetv %t.5;
+        %tmp.39 = mul %tmp.36 %tmp.38;
+        %tmp.40 = 3.289;
+        %tmp.41 = sub %tmp.39 %tmp.40;
+        lputv %M.6 %tmp.41;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 33 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %L.7 = local;
+        %tmp.43 = lgetv %M.6;
+        %tmp.44 = 1.916;
+        %tmp.45 = getm $.Toybox.Math;
+        %tmp.46 = getv function %tmp.45 :sin;
+        %tmp.48 = lgetv %M.6;
+        %tmp.50 = lgetv %D2R.1;
+        %tmp.51 = mul %tmp.48 %tmp.50;
+        %tmp.52 = invoke %tmp.45 %tmp.46(%tmp.51);
+        %tmp.53 = mul %tmp.44 %tmp.52;
+        %tmp.54 = add %tmp.43 %tmp.53;
+        %tmp.55 = 0.020;
+        %tmp.56 = getm $.Toybox.Math;
+        %tmp.57 = getv function %tmp.56 :sin;
+        %tmp.58 = 2;
+        %tmp.60 = lgetv %M.6;
+        %tmp.61 = mul %tmp.58 %tmp.60;
+        %tmp.63 = lgetv %D2R.1;
+        %tmp.64 = mul %tmp.61 %tmp.63;
+        %tmp.65 = invoke %tmp.56 %tmp.57(%tmp.64);
+        %tmp.66 = mul %tmp.55 %tmp.65;
+        %tmp.67 = add %tmp.54 %tmp.66;
+        %tmp.68 = 282.634;
+        %tmp.69 = add %tmp.67 %tmp.68;
+        lputv %L.7 %tmp.69;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 34 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_stmt:
+        %tmp.71 = lgetv %L.7;
+        %tmp.72 = 360;
+        %tmp.73 = gt %tmp.71 %tmp.72;
+        bf %tmp.73 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_15_35_21_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 35 9 ]
+        %tmp.75 = lgetv %L.7;
+        %tmp.76 = 360;
+        %tmp.77 = sub %tmp.75 %tmp.76;
+        lputv %L.7 %tmp.77;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_15_35_21_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_false:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 36 10 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_10_37_21_if_stmt:
+        %tmp.79 = lgetv %L.7;
+        %tmp.80 = 0;
+        %tmp.81 = lt %tmp.79 %tmp.80;
+        bf %tmp.81 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_10_37_21_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_10_37_21_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_21_37_21_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 37 9 ]
+        %tmp.83 = lgetv %L.7;
+        %tmp.84 = 360;
+        %tmp.85 = add %tmp.83 %tmp.84;
+        lputv %L.7 %tmp.85;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_21_37_21_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_10_37_21_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_36_10_37_21_if_end:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_34_2_37_21_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 39 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %RA.8 = local;
+        %tmp.87 = lgetv %R2D.2;
+        %tmp.88 = getm $.Toybox.Math;
+        %tmp.89 = getv function %tmp.88 :atan;
+        %tmp.90 = 0.91764;
+        %tmp.91 = getm $.Toybox.Math;
+        %tmp.92 = getv function %tmp.91 :tan;
+        %tmp.94 = lgetv %L.7;
+        %tmp.96 = lgetv %D2R.1;
+        %tmp.97 = mul %tmp.94 %tmp.96;
+        %tmp.98 = invoke %tmp.91 %tmp.92(%tmp.97);
+        %tmp.99 = mul %tmp.90 %tmp.98;
+        %tmp.100 = invoke %tmp.88 %tmp.89(%tmp.99);
+        %tmp.101 = mul %tmp.87 %tmp.100;
+        lputv %RA.8 %tmp.101;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 40 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_stmt:
+        %tmp.103 = lgetv %RA.8;
+        %tmp.104 = 360;
+        %tmp.105 = gt %tmp.103 %tmp.104;
+        bf %tmp.105 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_16_41_23_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 41 9 ]
+        %tmp.107 = lgetv %RA.8;
+        %tmp.108 = 360;
+        %tmp.109 = sub %tmp.107 %tmp.108;
+        lputv %RA.8 %tmp.109;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_16_41_23_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_false:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 42 10 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_10_43_23_if_stmt:
+        %tmp.111 = lgetv %RA.8;
+        %tmp.112 = 0;
+        %tmp.113 = lt %tmp.111 %tmp.112;
+        bf %tmp.113 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_10_43_23_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_10_43_23_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_22_43_23_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 43 9 ]
+        %tmp.115 = lgetv %RA.8;
+        %tmp.116 = 360;
+        %tmp.117 = add %tmp.115 %tmp.116;
+        lputv %RA.8 %tmp.117;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_22_43_23_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_10_43_23_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_42_10_43_23_if_end:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_40_2_43_23_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 45 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %Lquadrant.9 = local;
+        %tmp.118 = getm $.Toybox.Math;
+        %tmp.119 = getv function %tmp.118 :floor;
+        %tmp.121 = lgetv %L.7;
+        %tmp.122 = 90;
+        %tmp.123 = div %tmp.121 %tmp.122;
+        %tmp.124 = invoke %tmp.118 %tmp.119(%tmp.123);
+        %tmp.125 = 90;
+        %tmp.126 = mul %tmp.124 %tmp.125;
+        lputv %Lquadrant.9 %tmp.126;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 46 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %RAquadrant.10 = local;
+        %tmp.127 = getm $.Toybox.Math;
+        %tmp.128 = getv function %tmp.127 :floor;
+        %tmp.130 = lgetv %RA.8;
+        %tmp.131 = 90;
+        %tmp.132 = div %tmp.130 %tmp.131;
+        %tmp.133 = invoke %tmp.127 %tmp.128(%tmp.132);
+        %tmp.134 = 90;
+        %tmp.135 = mul %tmp.133 %tmp.134;
+        lputv %RAquadrant.10 %tmp.135;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 47 2 ]
+        %tmp.137 = lgetv %RA.8;
+        %tmp.139 = lgetv %Lquadrant.9;
+        %tmp.141 = lgetv %RAquadrant.10;
+        %tmp.142 = sub %tmp.139 %tmp.141;
+        %tmp.143 = add %tmp.137 %tmp.142;
+        lputv %RA.8 %tmp.143;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 49 1 ]
+        %tmp.145 = lgetv %RA.8;
+        %tmp.146 = 15;
+        %tmp.147 = div %tmp.145 %tmp.146;
+        lputv %RA.8 %tmp.147;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 51 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %sinDec.11 = local;
+        %tmp.148 = 0.39782;
+        %tmp.149 = getm $.Toybox.Math;
+        %tmp.150 = getv function %tmp.149 :sin;
+        %tmp.152 = lgetv %L.7;
+        %tmp.154 = lgetv %D2R.1;
+        %tmp.155 = mul %tmp.152 %tmp.154;
+        %tmp.156 = invoke %tmp.149 %tmp.150(%tmp.155);
+        %tmp.157 = mul %tmp.148 %tmp.156;
+        lputv %sinDec.11 %tmp.157;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 52 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %cosDec.12 = local;
+        %tmp.158 = getm $.Toybox.Math;
+        %tmp.159 = getv function %tmp.158 :cos;
+        %tmp.160 = getm $.Toybox.Math;
+        %tmp.161 = getv function %tmp.160 :asin;
+        %tmp.163 = lgetv %sinDec.11;
+        %tmp.164 = invoke %tmp.160 %tmp.161(%tmp.163);
+        %tmp.165 = invoke %tmp.158 %tmp.159(%tmp.164);
+        lputv %cosDec.12 %tmp.165;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 54 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %cosH.13 = local;
+        %tmp.166 = getm $.Toybox.Math;
+        %tmp.167 = getv function %tmp.166 :cos;
+        %tmp.169 = lgetv %zenith;
+        %tmp.171 = lgetv %D2R.1;
+        %tmp.172 = mul %tmp.169 %tmp.171;
+        %tmp.173 = invoke %tmp.166 %tmp.167(%tmp.172);
+        %tmp.175 = lgetv %sinDec.11;
+        %tmp.176 = getm $.Toybox.Math;
+        %tmp.177 = getv function %tmp.176 :sin;
+        %tmp.179 = lgetv %latitude;
+        %tmp.181 = lgetv %D2R.1;
+        %tmp.182 = mul %tmp.179 %tmp.181;
+        %tmp.183 = invoke %tmp.176 %tmp.177(%tmp.182);
+        %tmp.184 = mul %tmp.175 %tmp.183;
+        %tmp.185 = sub %tmp.173 %tmp.184;
+        %tmp.187 = lgetv %cosDec.12;
+        %tmp.188 = getm $.Toybox.Math;
+        %tmp.189 = getv function %tmp.188 :cos;
+        %tmp.191 = lgetv %latitude;
+        %tmp.193 = lgetv %D2R.1;
+        %tmp.194 = mul %tmp.191 %tmp.193;
+        %tmp.195 = invoke %tmp.188 %tmp.189(%tmp.194);
+        %tmp.196 = mul %tmp.187 %tmp.195;
+        %tmp.197 = div %tmp.185 %tmp.196;
+        lputv %cosH.13 %tmp.197;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 56 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_2_57_81_if_stmt:
+        %tmp.199 = lgetv %cosH.13;
+        %tmp.200 = 1;
+        %tmp.201 = gt %tmp.199 %tmp.200;
+        bf %tmp.201 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_2_57_81_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_2_57_81_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_13_57_81_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 57 4 ]
+        %tmp.202 = getm $.Toybox.System;
+        %tmp.203 = getv function %tmp.202 :print;
+        %tmp.204 = "the sun never rises on this location (on the specified date)";
+        invoke %tmp.202 %tmp.203(%tmp.204);
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_13_57_81_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_2_57_81_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_56_2_57_81_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 58 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_2_59_80_if_stmt:
+        %tmp.206 = lgetv %cosH.13;
+        %tmp.207 = -1;
+        %tmp.208 = lt %tmp.206 %tmp.207;
+        bf %tmp.208 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_2_59_80_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_2_59_80_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_14_59_80_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 59 4 ]
+        %tmp.209 = getm $.Toybox.System;
+        %tmp.210 = getv function %tmp.209 :print;
+        %tmp.211 = "the sun never sets on this location (on the specified date)";
+        invoke %tmp.209 %tmp.210(%tmp.211);
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_14_59_80_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_2_59_80_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_58_2_59_80_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 61 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %H.14 = local;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 62 3 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_stmt:
+        %tmp.213 = lgetv %riseSet;
+        bf %tmp.213 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_16_63_41_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 63 9 ]
+        %tmp.214 = 360;
+        %tmp.216 = lgetv %R2D.2;
+        %tmp.217 = getm $.Toybox.Math;
+        %tmp.218 = getv function %tmp.217 :acos;
+        %tmp.220 = lgetv %cosH.13;
+        %tmp.221 = invoke %tmp.217 %tmp.218(%tmp.220);
+        %tmp.222 = mul %tmp.216 %tmp.221;
+        %tmp.223 = sub %tmp.214 %tmp.222;
+        lputv %H.14 %tmp.223;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_16_63_41_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_false:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_64_11_65_35_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 65 9 ]
+        %tmp.225 = lgetv %R2D.2;
+        %tmp.226 = getm $.Toybox.Math;
+        %tmp.227 = getv function %tmp.226 :acos;
+        %tmp.229 = lgetv %cosH.13;
+        %tmp.230 = invoke %tmp.226 %tmp.227(%tmp.229);
+        %tmp.231 = mul %tmp.225 %tmp.230;
+        lputv %H.14 %tmp.231;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_64_11_65_35_stop:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_62_3_65_35_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 67 2 ]
+        %tmp.233 = lgetv %H.14;
+        %tmp.234 = 15;
+        %tmp.235 = div %tmp.233 %tmp.234;
+        lputv %H.14 %tmp.235;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 69 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %T.15 = local;
+        %tmp.237 = lgetv %H.14;
+        %tmp.239 = lgetv %RA.8;
+        %tmp.240 = add %tmp.237 %tmp.239;
+        %tmp.241 = 0.06571;
+        %tmp.243 = lgetv %t.5;
+        %tmp.244 = mul %tmp.241 %tmp.243;
+        %tmp.245 = sub %tmp.240 %tmp.244;
+        %tmp.246 = 6.622;
+        %tmp.247 = sub %tmp.245 %tmp.246;
+        lputv %T.15 %tmp.247;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 71 5 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %UT.16 = local;
+        %tmp.249 = lgetv %T.15;
+        %tmp.251 = lgetv %lngHour.4;
+        %tmp.252 = sub %tmp.249 %tmp.251;
+        lputv %UT.16 %tmp.252;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 77 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop" ]
+        %localT.17 = local;
+        %tmp.254 = lgetv %UT.16;
+        %tmp.256 = lgetv %localOffset;
+        %tmp.257 = add %tmp.254 %tmp.256;
+        lputv %localT.17 %tmp.257;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 78 3 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_stmt:
+        %tmp.259 = lgetv %localT.17;
+        %tmp.260 = 24;
+        %tmp.261 = gt %tmp.259 %tmp.260;
+        bf %tmp.261 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_20_79_30_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 79 9 ]
+        %tmp.263 = lgetv %localT.17;
+        %tmp.264 = 24;
+        %tmp.265 = sub %tmp.263 %tmp.264;
+        lputv %localT.17 %tmp.265;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_20_79_30_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_false:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 80 10 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_10_81_30_if_stmt:
+        %tmp.267 = lgetv %localT.17;
+        %tmp.268 = 0;
+        %tmp.269 = lt %tmp.267 %tmp.268;
+        bf %tmp.269 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_10_81_30_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_10_81_30_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_26_81_30_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 81 9 ]
+        %tmp.271 = lgetv %localT.17;
+        %tmp.272 = 24;
+        %tmp.273 = add %tmp.271 %tmp.272;
+        lputv %localT.17 %tmp.273;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_26_81_30_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_10_81_30_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_80_10_81_30_if_end:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_78_3_81_30_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 82 1 ]
+        %tmp.275 = lgetv %localT.17;
+        ret %tmp.275;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_9_1_83_0_stop:
+    }
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 85; ]
+    function HourFromDecimal(decimalData) {
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 87 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop" ]
+        %hour.1 = local;
+        %tmp.1 = getm $.Toybox.Math;
+        %tmp.2 = getv function %tmp.1 :floor;
+        %tmp.4 = lgetv %decimalData;
+        %tmp.5 = invoke %tmp.1 %tmp.2(%tmp.4);
+        lputv %hour.1 %tmp.5;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 88 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop" ]
+        %minutesDecimal.2 = local;
+        %tmp.7 = lgetv %decimalData;
+        %tmp.9 = lgetv %hour.1;
+        %tmp.10 = sub %tmp.7 %tmp.9;
+        lputv %minutesDecimal.2 %tmp.10;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 89 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop" ]
+        %minutes.3 = local;
+        %tmp.12 = lgetv %minutesDecimal.2;
+        %tmp.13 = 60;
+        %tmp.14 = mul %tmp.12 %tmp.13;
+        lputv %minutes.3 %tmp.14;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 91 1 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_1_91_26_if_stmt:
+        %tmp.16 = lgetv %hour.1;
+        %tmp.17 = 23;
+        %tmp.18 = gt %tmp.16 %tmp.17;
+        bf %tmp.18 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_1_91_26_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_1_91_26_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_12_91_26_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 91 13 ]
+        %tmp.20 = lgetv %hour.1;
+        %tmp.21 = 24;
+        %tmp.22 = sub %tmp.20 %tmp.21;
+        lputv %hour.1 %tmp.22;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_12_91_26_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_1_91_26_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_91_1_91_26_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 92 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop" ]
+        %timeFormat.4 = local;
+        %tmp.23 = "$1$:$2$";
+        lputv %timeFormat.4 %tmp.23;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 93 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop" ]
+        %dateString.5 = local;
+        %tmp.24 = getm $.Toybox.Lang;
+        %tmp.25 = getv function %tmp.24 :format;
+        %tmp.27 = lgetv %timeFormat.4;
+        %tmp.28 = newa 2;
+        %tmp.29 = lgetv %hour.1;
+        %tmp.30 = getv function %tmp.29 :format;
+        %tmp.31 = "%02d";
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        %tmp.33 = dup %tmp.28;
+        %tmp.34 = aputv %tmp.33 0 %tmp.32;
+        %tmp.35 = lgetv %minutes.3;
+        %tmp.36 = getv function %tmp.35 :format;
+        %tmp.37 = "%02d";
+        %tmp.38 = invoke %tmp.35 %tmp.36(%tmp.37);
+        %tmp.39 = dup %tmp.34;
+        %tmp.40 = aputv %tmp.39 1 %tmp.38;
+        %tmp.41 = invoke %tmp.24 %tmp.25(%tmp.27, %tmp.40);
+        lputv %dateString.5 %tmp.41;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 94 1 ]
+        %tmp.43 = lgetv %dateString.5;
+        ret %tmp.43;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_85_37_95_0_stop:
+    }
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 97; ]
+    function WeekOfTheYear() {
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 98 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %dateS.1 = local;
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        %tmp.2 = getv function %tmp.1 :info;
+        %tmp.3 = getm $.Toybox.Time;
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        %tmp.6 = getm $.Toybox.Time;
+        %tmp.7 = getv %tmp.6 :FORMAT_SHORT;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %dateS.1 %tmp.8;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 99 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %dayOfYear.2 = local;
+        %tmp.9 = self;
+        %tmp.10 = getv function %tmp.9 :DayOfYear;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        lputv %dayOfYear.2 %tmp.11;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 100 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %dayOfWeek.3 = local;
+        %tmp.12 = lgetv %dateS.1;
+        %tmp.13 = getv %tmp.12 :day_of_week;
+        lputv %dayOfWeek.3 %tmp.13;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 102 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %options.4 = local;
+        %tmp.14 = newd 4;
+        %tmp.16 = const :year;
+        %tmp.17 = lgetv %dateS.1;
+        %tmp.18 = getv %tmp.17 :year;
+        %tmp.19 = dup %tmp.14;
+        %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+        %tmp.22 = const :month;
+        %tmp.23 = 1;
+        %tmp.24 = dup %tmp.20;
+        %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
+        %tmp.27 = const :day;
+        %tmp.28 = 1;
+        %tmp.29 = dup %tmp.25;
+        %tmp.30 = aputv %tmp.29 %tmp.27 %tmp.28;
+        %tmp.32 = const :hour;
+        %tmp.33 = 0;
+        %tmp.34 = dup %tmp.30;
+        %tmp.35 = aputv %tmp.34 %tmp.32 %tmp.33;
+        lputv %options.4 %tmp.35;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 108 5 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %momentOfCurrentYear.5 = local;
+        %tmp.36 = getm $.Toybox.Time.Gregorian;
+        %tmp.37 = getv function %tmp.36 :moment;
+        %tmp.39 = lgetv %options.4;
+        %tmp.40 = invoke %tmp.36 %tmp.37(%tmp.39);
+        lputv %momentOfCurrentYear.5 %tmp.40;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 110 5 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %firstDayInYear.6 = local;
+        %tmp.41 = getm $.Toybox.Time.Gregorian;
+        %tmp.42 = getv function %tmp.41 :info;
+        %tmp.44 = lgetv %momentOfCurrentYear.5;
+        %tmp.45 = getm $.Toybox.Time;
+        %tmp.46 = getv %tmp.45 :FORMAT_SHORT;
+        %tmp.47 = invoke %tmp.41 %tmp.42(%tmp.44, %tmp.46);
+        lputv %firstDayInYear.6 %tmp.47;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 111 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %yearFirstDayOfWeek.7 = local;
+        %tmp.48 = lgetv %firstDayInYear.6;
+        %tmp.49 = getv %tmp.48 :day_of_week;
+        lputv %yearFirstDayOfWeek.7 %tmp.49;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 113 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop" ]
+        %week.8 = local;
+        %tmp.51 = lgetv %dayOfYear.2;
+        %tmp.52 = 6;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.54 = 7;
+        %tmp.55 = div %tmp.53 %tmp.54;
+        lputv %week.8 %tmp.55;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 114 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_114_2_117_2_if_stmt:
+        %tmp.57 = lgetv %dayOfWeek.3;
+        %tmp.59 = lgetv %yearFirstDayOfWeek.7;
+        %tmp.60 = lt %tmp.57 %tmp.59;
+        bf %tmp.60 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_114_2_117_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_114_2_117_2_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_115_2_117_2_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 116 2 ]
+        %tmp.62 = lgetv %week.8;
+        %tmp.63 = 1;
+        %tmp.64 = add %tmp.62 %tmp.63;
+        lputv %week.8 %tmp.64;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_115_2_117_2_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_114_2_117_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_114_2_117_2_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 118 2 ]
+        %tmp.66 = lgetv %week.8;
+        ret %tmp.66;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_97_24_119_0_stop:
+    }
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 121; ]
+    function DayOfYear() {
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 122 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %dayOfYear.1 = local;
+        %tmp.1 = 0;
+        lputv %dayOfYear.1 %tmp.1;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 123 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %normalYear.2 = local;
+        %tmp.2 = newa 12;
+        %tmp.3 = 31;
+        %tmp.4 = dup %tmp.2;
+        %tmp.5 = aputv %tmp.4 0 %tmp.3;
+        %tmp.6 = 28;
+        %tmp.7 = dup %tmp.5;
+        %tmp.8 = aputv %tmp.7 1 %tmp.6;
+        %tmp.9 = 31;
+        %tmp.10 = dup %tmp.8;
+        %tmp.11 = aputv %tmp.10 2 %tmp.9;
+        %tmp.12 = 30;
+        %tmp.13 = dup %tmp.11;
+        %tmp.14 = aputv %tmp.13 3 %tmp.12;
+        %tmp.15 = 31;
+        %tmp.16 = dup %tmp.14;
+        %tmp.17 = aputv %tmp.16 4 %tmp.15;
+        %tmp.18 = 30;
+        %tmp.19 = dup %tmp.17;
+        %tmp.20 = aputv %tmp.19 5 %tmp.18;
+        %tmp.21 = 31;
+        %tmp.22 = dup %tmp.20;
+        %tmp.23 = aputv %tmp.22 6 %tmp.21;
+        %tmp.24 = 31;
+        %tmp.25 = dup %tmp.23;
+        %tmp.26 = aputv %tmp.25 7 %tmp.24;
+        %tmp.27 = 30;
+        %tmp.28 = dup %tmp.26;
+        %tmp.29 = aputv %tmp.28 8 %tmp.27;
+        %tmp.30 = 31;
+        %tmp.31 = dup %tmp.29;
+        %tmp.32 = aputv %tmp.31 9 %tmp.30;
+        %tmp.33 = 30;
+        %tmp.34 = dup %tmp.32;
+        %tmp.35 = aputv %tmp.34 10 %tmp.33;
+        %tmp.36 = 31;
+        %tmp.37 = dup %tmp.35;
+        %tmp.38 = aputv %tmp.37 11 %tmp.36;
+        lputv %normalYear.2 %tmp.38;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 124 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %leapYear.3 = local;
+        %tmp.39 = newa 12;
+        %tmp.40 = 31;
+        %tmp.41 = dup %tmp.39;
+        %tmp.42 = aputv %tmp.41 0 %tmp.40;
+        %tmp.43 = 29;
+        %tmp.44 = dup %tmp.42;
+        %tmp.45 = aputv %tmp.44 1 %tmp.43;
+        %tmp.46 = 31;
+        %tmp.47 = dup %tmp.45;
+        %tmp.48 = aputv %tmp.47 2 %tmp.46;
+        %tmp.49 = 30;
+        %tmp.50 = dup %tmp.48;
+        %tmp.51 = aputv %tmp.50 3 %tmp.49;
+        %tmp.52 = 31;
+        %tmp.53 = dup %tmp.51;
+        %tmp.54 = aputv %tmp.53 4 %tmp.52;
+        %tmp.55 = 30;
+        %tmp.56 = dup %tmp.54;
+        %tmp.57 = aputv %tmp.56 5 %tmp.55;
+        %tmp.58 = 31;
+        %tmp.59 = dup %tmp.57;
+        %tmp.60 = aputv %tmp.59 6 %tmp.58;
+        %tmp.61 = 31;
+        %tmp.62 = dup %tmp.60;
+        %tmp.63 = aputv %tmp.62 7 %tmp.61;
+        %tmp.64 = 30;
+        %tmp.65 = dup %tmp.63;
+        %tmp.66 = aputv %tmp.65 8 %tmp.64;
+        %tmp.67 = 31;
+        %tmp.68 = dup %tmp.66;
+        %tmp.69 = aputv %tmp.68 9 %tmp.67;
+        %tmp.70 = 30;
+        %tmp.71 = dup %tmp.69;
+        %tmp.72 = aputv %tmp.71 10 %tmp.70;
+        %tmp.73 = 31;
+        %tmp.74 = dup %tmp.72;
+        %tmp.75 = aputv %tmp.74 11 %tmp.73;
+        lputv %leapYear.3 %tmp.75;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 125 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %dateS.4 = local;
+        %tmp.76 = getm $.Toybox.Time.Gregorian;
+        %tmp.77 = getv function %tmp.76 :info;
+        %tmp.78 = getm $.Toybox.Time;
+        %tmp.79 = getv function %tmp.78 :now;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = getm $.Toybox.Time;
+        %tmp.82 = getv %tmp.81 :FORMAT_SHORT;
+        %tmp.83 = invoke %tmp.76 %tmp.77(%tmp.80, %tmp.82);
+        lputv %dateS.4 %tmp.83;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 126 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %day.5 = local;
+        %tmp.84 = lgetv %dateS.4;
+        %tmp.85 = getv %tmp.84 :day;
+        lputv %day.5 %tmp.85;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 127 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %month.6 = local;
+        %tmp.86 = lgetv %dateS.4;
+        %tmp.87 = getv %tmp.86 :month;
+        lputv %month.6 %tmp.87;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 128 1 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop" ]
+        %year.7 = local;
+        %tmp.88 = lgetv %dateS.4;
+        %tmp.89 = getv %tmp.88 :year;
+        lputv %year.7 %tmp.89;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 130 1 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_stmt:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_4_130_44_begin:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_5_130_28_begin:
+        %tmp.91 = lgetv %year.7;
+        %tmp.92 = 4;
+        %tmp.93 = mod %tmp.91 %tmp.92;
+        %tmp.94 = 0;
+        %tmp.95 = eq %tmp.93 %tmp.94;
+        bf %tmp.95 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_34_130_44_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_18_130_28_true:
+        %tmp.97 = lgetv %year.7;
+        %tmp.98 = 100;
+        %tmp.99 = mod %tmp.97 %tmp.98;
+        %tmp.100 = 0;
+        %tmp.101 = ne %tmp.99 %tmp.100;
+        push %tmp.101;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_18_130_28_end:
+        %tmp.102 = phi [%tmp.95 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_5_130_28_begin] [%tmp.101 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_18_130_28_true] [%tmp.102 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_18_130_28_end];
+        bt %tmp.102 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_true;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_34_130_44_false:
+        %tmp.104 = lgetv %year.7;
+        %tmp.105 = 400;
+        %tmp.106 = mod %tmp.104 %tmp.105;
+        %tmp.107 = 0;
+        %tmp.108 = eq %tmp.106 %tmp.107;
+        push %tmp.108;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_34_130_44_end:
+        %tmp.109 = phi [%tmp.102 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_4_130_44_begin] [%tmp.108 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_34_130_44_false] [%tmp.109 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_34_130_44_end];
+        bf %tmp.109 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_131_1_137_1_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 132 2 ]
+        for @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_test @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_incr @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_init:
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_begin" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_end" ]
+        %i.8 = local;
+        %tmp.110 = 0;
+        lputv %i.8 %tmp.110;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_test:
+        %tmp.112 = lgetv %i.8;
+        %tmp.114 = lgetv %month.6;
+        %tmp.115 = 1;
+        %tmp.116 = sub %tmp.114 %tmp.115;
+        %tmp.117 = lt %tmp.112 %tmp.116;
+        bf %tmp.117 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_begin:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_133_2_135_2_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 134 2 ]
+        %tmp.119 = lgetv %dayOfYear.1;
+        %tmp.121 = lgetv %leapYear.3;
+        %tmp.123 = lgetv %i.8;
+        %tmp.124 = agetv %tmp.121 %tmp.123;
+        %tmp.125 = add %tmp.119 %tmp.124;
+        lputv %dayOfYear.1 %tmp.125;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_133_2_135_2_stop:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_incr:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 132 ]
+        %tmp.128 = lgetv %i.8;
+        %tmp.129 = add %tmp.128 1;
+        lputv %i.8 %tmp.129;
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_test;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_132_2_135_2_for_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 136 2 ]
+        %tmp.131 = lgetv %dayOfYear.1;
+        %tmp.133 = lgetv %day.5;
+        %tmp.134 = add %tmp.131 %tmp.133;
+        lputv %dayOfYear.1 %tmp.134;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_131_1_137_1_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_false:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_139_1_145_1_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 140 2 ]
+        for @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_test @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_incr @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_init:
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_begin" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_end" ]
+        %i.9 = local;
+        %tmp.135 = 0;
+        lputv %i.9 %tmp.135;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_test:
+        %tmp.137 = lgetv %i.9;
+        %tmp.139 = lgetv %month.6;
+        %tmp.140 = 1;
+        %tmp.141 = sub %tmp.139 %tmp.140;
+        %tmp.142 = lt %tmp.137 %tmp.141;
+        bf %tmp.142 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_begin:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_141_2_143_2_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 142 2 ]
+        %tmp.144 = lgetv %dayOfYear.1;
+        %tmp.146 = lgetv %normalYear.2;
+        %tmp.148 = lgetv %i.9;
+        %tmp.149 = agetv %tmp.146 %tmp.148;
+        %tmp.150 = add %tmp.144 %tmp.149;
+        lputv %dayOfYear.1 %tmp.150;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_141_2_143_2_stop:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_incr:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 140 ]
+        %tmp.153 = lgetv %i.9;
+        %tmp.154 = add %tmp.153 1;
+        lputv %i.9 %tmp.154;
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_test;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_140_2_143_2_for_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 144 2 ]
+        %tmp.156 = lgetv %dayOfYear.1;
+        %tmp.158 = lgetv %day.5;
+        %tmp.159 = add %tmp.156 %tmp.158;
+        lputv %dayOfYear.1 %tmp.159;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_139_1_145_1_stop:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_130_1_145_1_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 146 1 ]
+        %tmp.161 = lgetv %dayOfYear.1;
+        ret %tmp.161;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_121_20_147_1_stop:
+    }
+    [ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 150; ]
+    function dayTimeLeft(currentTime, sunrise, sunset) {
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 153 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop" ]
+        %hours.1 = local;
+        %tmp.1 = lgetv %currentTime;
+        %tmp.2 = getv %tmp.1 :hour;
+        %tmp.3 = getv function %tmp.2 :toFloat;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %hours.1 %tmp.4;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 154 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop" ]
+        %minutes.2 = local;
+        %tmp.5 = lgetv %currentTime;
+        %tmp.6 = getv %tmp.5 :min;
+        %tmp.7 = getv function %tmp.6 :toFloat;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        lputv %minutes.2 %tmp.8;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 155 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop" ]
+        %minutesDecimal.3 = local;
+        %tmp.10 = lgetv %minutes.2;
+        %tmp.11 = 60;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %minutesDecimal.3 %tmp.12;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 156 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop" ]
+        %decimalTime.4 = local;
+        %tmp.14 = lgetv %hours.1;
+        %tmp.16 = lgetv %minutesDecimal.3;
+        %tmp.17 = add %tmp.14 %tmp.16;
+        lputv %decimalTime.4 %tmp.17;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 157 2 ]
+        [ "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_start" "D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop" ]
+        %timeTo.5 = local;
+        %tmp.18 = null;
+        lputv %timeTo.5 %tmp.18;
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 158 2 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_stmt:
+        %tmp.20 = lgetv %decimalTime.4;
+        %tmp.22 = lgetv %sunrise;
+        %tmp.23 = lt %tmp.20 %tmp.22;
+        bf %tmp.23 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_25_160_2_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 159 2 ]
+        %tmp.24 = self;
+        %tmp.25 = getv function %tmp.24 :HourFromDecimal;
+        %tmp.27 = lgetv %sunrise;
+        %tmp.29 = lgetv %decimalTime.4;
+        %tmp.30 = sub %tmp.27 %tmp.29;
+        %tmp.31 = invoke %tmp.24 %tmp.25(%tmp.30);
+        lputv %timeTo.5 %tmp.31;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_25_160_2_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_false:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 161 7 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_stmt:
+        %tmp.33 = lgetv %decimalTime.4;
+        %tmp.35 = lgetv %sunset;
+        %tmp.36 = gt %tmp.33 %tmp.35;
+        bf %tmp.36 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_false;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_29_162_19_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 162 2 ]
+        %tmp.37 = "--:--  ";
+        lputv %timeTo.5 %tmp.37;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_29_162_19_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_false:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 163 7 ]
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_7_165_2_if_stmt:
+        %tmp.39 = lgetv %decimalTime.4;
+        %tmp.41 = lgetv %sunrise;
+        %tmp.42 = gt %tmp.39 %tmp.41;
+        bf %tmp.42 @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_7_165_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_7_165_2_if_true:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_30_165_2_start:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 164 2 ]
+        %tmp.43 = self;
+        %tmp.44 = getv function %tmp.43 :HourFromDecimal;
+        %tmp.46 = lgetv %sunset;
+        %tmp.48 = lgetv %decimalTime.4;
+        %tmp.49 = sub %tmp.46 %tmp.48;
+        %tmp.50 = invoke %tmp.43 %tmp.44(%tmp.49);
+        lputv %timeTo.5 %tmp.50;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_30_165_2_stop:
+        goto @D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_7_165_2_if_end;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_163_7_165_2_if_end:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_161_7_165_2_if_end:
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_158_2_165_2_if_end:
+[ "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc" 166 2 ]
+        %tmp.52 = lgetv %timeTo.5;
+        ret %tmp.52;
+D_Repos_Garmin_SunRiseSet_SunRiseSet_mc_151_1_167_1_stop:
+    }
+}
+[ @file = "D:\Repos\Garmin\SunRiseSet\SunRiseSet.mc"; @line = 1; ]
+<init> {
+}

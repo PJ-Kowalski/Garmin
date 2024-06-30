@@ -1,0 +1,21 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+    <label id="Time" x="250" y="center" font="Graphics.FONT_NUMBER_HOT" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" />
+    <label id="Date" x="82" y="6" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE"/>
+    <label id="SunRise" x="85" y="75" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="--:--"/>
+    <label id="SunSet" x="205" y="75" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="--:--"/>
+    <label id="DayLeft" x="150" y="75" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="--:--"/>
+    <label id="Field1" x="108" y="194"  font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" text="1000 m"/>
+    <label id="Field2" x="180" y="194" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="NA"/>
+    <label id="RestingHR" x="155" y="228" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" text="52"/>
+    <label id="Steps" x="50" y="165" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="10590"/>
+    <label id="Calories" x="180" y="165" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" text="2500"/>
+    <label id="DayNumber" x="61" y="30" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE"/>
+    <label id="WeekNumber" x="119" y="30" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE"/>
+    <label id="NotyficationNumber" x="42" y="81" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" text="1"/>
+    <label id="AlarmNumber" x="42" y="55" font="Graphics.FONT_SYSTEM_TINY" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" text="2"/>
+    <label id="Battery" x="45" y="138" font="Graphics.FONT_SYSTEM_XTINY" justification="Graphics.TEXT_JUSTIFY_RIGHT" color="Graphics.COLOR_BLUE" text="100%"/>
+ 
+
+</layout>
+
